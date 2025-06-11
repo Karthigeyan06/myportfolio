@@ -58,7 +58,8 @@ import javascriptImg from './assets/images/skills/javascript.png';
 import kicadImg from './assets/images/skills/kicad.png';
 import keilImag from './assets/images/skills/keil.png';
 import esp32Img from './assets/images/skills/esp32.png';
-import javaImg from './assets/images/skills/java.png'; // Importing Java image
+import javaImg from './assets/images/skills/java.png';
+import linuxImg from './assets/images/skills/linux.png' // Importing Java image
 
 
 export default function Portfolio() {
@@ -542,6 +543,7 @@ useEffect(() => {
           { name: "HTML", img: htmlImg },
           { name: "CSS", img: cssImg },
           { name: "JavaScript", img: javascriptImg },
+          { name: "Java", img: javaImg }, // Added Java to the skills list
         ],
       },
       {
@@ -576,6 +578,7 @@ useEffect(() => {
           { name: "ISPSoft", img: ispSoftImg },
           { name: "KICAD", img: kicadImg },
           { name: "KEIL UVISION", img: keilImag },
+          { name: "Linux", img: linuxImg }, // Added Linux to the skills list
         ],
       },
     ].map((category, idx) => (
