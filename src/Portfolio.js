@@ -21,6 +21,14 @@ import project15Image from './assets/images/audio.png';
 import project16Image from './assets/images/bank.png';
 import project17Image from './assets/images/it.png';
 import project18Image from './assets/images/ki.png';
+import project19Image from './assets/images/auction.png';
+import project20Image from './assets/images/winp.png'; // Importing additional project images
+import project21Image from './assets/images/robot.png'; // Placeholder for additional project image
+import project22Image from './assets/images/sha.png'; // Placeholder for additional project image
+import project23Image from './assets/images/invt.png';
+import project24Image from './assets/images/comm.png' // Placeholder for additional project image
+// Placeholder for additional project image
+
 import pythonImg from './assets/images/skills/python.jpg'; // Importing images
 import cImg from './assets/images/skills/c.jpg';
 import verilogImg from './assets/images/skills/verilog.jpg';
@@ -50,16 +58,59 @@ import javascriptImg from './assets/images/skills/javascript.png';
 import kicadImg from './assets/images/skills/kicad.png';
 import keilImag from './assets/images/skills/keil.png';
 import esp32Img from './assets/images/skills/esp32.png';
+import javaImg from './assets/images/skills/java.png'; // Importing Java image
 
 
 export default function Portfolio() {
   const projectData = [
     {
-      image: project2Image, // Local image for Project 1
+      image: project19Image, // Local image for Project 1
       url: 'https://github.com/Karthigeyan06/project1', // URL for Project 1
-      title: 'Smart Street Light with Fault Detection',
+      title: 'IPL Auction System Using Python',
+      category: 'IT',
+      description: 'Developed an IPL auction system using Python, allowing users to bid on players, manage teams, and simulate auction scenarios. The system features a user-friendly interface and real-time updates.',
+      
+    },
+    {
+      image: project20Image, // Local image for Project 1
+      url: 'https://github.com/Karthigeyan06/project1', // URL for Project 1
+      title: 'Cricket Match Win Predictor Using Java',
+      category: 'IT',
+      description: 'Developed a cricket match win predictor using Java, leveraging historical match data and machine learning algorithms to predict match outcomes. The application provides insights into team performance and player statistics.',
+      
+    },
+
+    {
+      image: project21Image, // Local image for Project 1
+      url: 'https://github.com/Karthigeyan06/project1', // URL for Project 1
+      title: 'Internal Logistics Robot Using Raspberry Pi',
       category: 'Core',
-      description: 'Built a smart street light system with ESP8266 and LDR for automated night/day operation and fault detection, sending alerts with location to mobile devices',
+      description: 'Developed an internal logistics robot using Raspberry Pi, capable of navigating through warehouses and delivering items autonomously. The robot uses sensors for obstacle detection and pathfinding algorithms for efficient navigation.',
+      
+    },
+
+    {
+      image: project22Image, // Local image for Project 1
+      url: 'https://github.com/Karthigeyan06/project1', // URL for Project 1
+      title: 'AI Integrated Structural Health Monitoring System',
+      category: 'Core',
+      description: 'Developed an AI-integrated structural health monitoring system that uses sensors to collect data on structural integrity and applies machine learning algorithms to predict potential failures, enhancing safety and maintenance efficiency.',
+      
+    },
+
+    {
+      image: project23Image, // Local image for Project 1
+      url: 'https://github.com/Karthigeyan06/project1', // URL for Project 1
+      title: 'Inventory Management System Using Python and Sqlite',
+      category: 'IT',
+      description: 'Developed an inventory management system using Python and SQLite, allowing users to track stock levels, manage suppliers, and generate reports. The system features a user-friendly interface and real-time updates.',
+    },
+    {
+      image: project24Image, // Local image for Project 1
+      url: 'https://github.com/Karthigeyan06/project1', // URL for Project 1
+      title: 'Simulated Message Communication through Network between Machines',
+      category: 'Core',
+      description: 'Linux-based project simulating message communication between machines in a network. It demonstrates how machines can exchange messages using protocols like TCP/IP, enhancing understanding of network communication.',
     },
     {
       image: project1Image, // Local image for Project 2
@@ -201,9 +252,9 @@ useEffect(() => {
     const interval = setInterval(() => {
       setCount((prev) => {
         const next = {
-          projects: Math.min(prev.projects + 1, 8),
+          projects: Math.min(prev.projects + 1, 15),
           internships: Math.min(prev.internships + 1, 3),
-          miniProjects: Math.min(prev.miniProjects + 1, 25),
+          miniProjects: Math.min(prev.miniProjects + 1, 30),
           cgpa: Math.min((parseFloat(prev.cgpa) + 0.1).toFixed(1), 8.6),
         };
         return {
