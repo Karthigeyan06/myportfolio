@@ -333,14 +333,28 @@ useEffect(() => {
     </button>
   </div>
 </nav>
-
 {/* Hero Section */}
 <section className="min-h-screen flex items-center justify-center px-6 mt-16">
-  <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6 max-w-7xl w-full">
+  <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-10 max-w-7xl w-full">
 
-    {/* Left Side – Text */}
-    <div className="text-center md:text-left">
-      {/* Name Heading */}
+    {/* Image First on Mobile */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
+      className="flex justify-center md:justify-end order-first md:order-last"
+    >
+      <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-[0_0_20px_#00fff7] hover:shadow-[0_0_30px_#00fff7] transition duration-300">
+  <img
+    src={profile}
+    alt="Karthigeyan Ganesan"
+    className="w-full h-full object-cover"
+  />
+</div>
+    </motion.div>
+
+    {/* Text Section */}
+    <div className="text-center md:text-center">
       <motion.h1
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -350,22 +364,20 @@ useEffect(() => {
         Hello, I'm KARTHIGEYAN
       </motion.h1>
 
-      {/* Subtitle */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="text-lg md:text-xl text-gray-400 leading-relaxed font-poppins mb-6"
+        className="text-lg md:text-xl text-gray-400 leading-relaxed font-poppins mb-4"
       >
-        Embedded Systems & IoT Enthusiast | Electronics & Communication Engineer
+        Embedded Systems & IoT Enthusiast | Electronics & Communication Engineer | Linux | Computer Networking 
       </motion.p>
 
-      {/* Social Icons */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="flex justify-center md:justify-start space-x-6 mb-6"
+        className="flex justify-center md:justify-center space-x-6 mb-4"
       >
         <a href="mailto:karthigeyanganesan06@gmail.com" className="text-gray-400 hover:text-cyan-400 transition-transform hover:scale-110"><Mail size={28} /></a>
         <a href="https://www.linkedin.com/in/karthigeyan-ganesan-203066257/" target="_blank" className="text-gray-400 hover:text-cyan-400 transition-transform hover:scale-110"><Linkedin size={28} /></a>
@@ -373,14 +385,13 @@ useEffect(() => {
         <a href="tel:+918428804975" className="text-gray-400 hover:text-cyan-400 transition-transform hover:scale-110"><Phone size={28} /></a>
       </motion.div>
 
-      {/* Resume Button */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
       >
         <a 
-          href="https://drive.google.com/file/d/1-aYnK_5kCcJfmCrmuoStjw9lSzGHNqDw/view?usp=sharing"
+          href="https://drive.google.com/file/d/1BQfdOsaT9mH6RY5h_pvRsciqSBhTjBFl/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center px-6 py-3 text-base md:text-lg font-semibold text-white border-2 border-cyan-400 rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300 shadow-lg"
@@ -389,25 +400,8 @@ useEffect(() => {
         </a>
       </motion.div>
     </div>
-
-    {/* Right Side – Profile Image */}
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1 }}
-      className="flex justify-center md:justify-end"
-    >
-      <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl">
-        <img
-          src={profile}
-          alt="Karthigeyan Ganesan"
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </motion.div>
   </div>
 </section>
-
 
 
 
@@ -417,6 +411,7 @@ useEffect(() => {
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
+
           transition={{ duration: 0.8 }}
           className="text-4xl font-bold text-center mb-6 text-cyan-400"
         >
@@ -554,6 +549,36 @@ useEffect(() => {
   </div>
 </section>
 
+{/* Experience Section */}
+      <section id="experience" className="py-20 bg-gradient-to-b from-gray-900 to-black px-8">
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl font-bold text-center mb-6 text-cyan-400"
+        >
+          Experience
+        </motion.h2>
+        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="p-6 bg-gray-800 shadow-md rounded-2xl">
+            <h3 className="text-2xl font-semibold text-cyan-400">Kreotix Innovations</h3>
+            <p className="text-gray-400">Technical Lead | Feb 2025 – May 2025</p>
+            <p className="mt-2 text-gray-400">Managing and executing all technical activities of the startup, including website development, client solutions, and project implementation.</p>
+          </div>
+          <div className="p-6 bg-gray-800 shadow-md rounded-2xl">
+            <h3 className="text-2xl font-semibold text-cyan-400">Delphi-TVS Technologies Limited</h3>
+            <p className="text-gray-400">Engineering Intern | Dec 2024 – Jan 2025</p>
+            <p className="mt-2 text-gray-400">Worked on machine troubleshooting, PLC programming, and CNC maintenance. Developed a QR code-based web app to track machine data.</p>
+          </div>
+          <div className="p-6 bg-gray-800 shadow-md rounded-2xl">
+            <h3 className="text-2xl font-semibold text-cyan-400">Rook Ecom Pvt Ltd</h3>
+            <p className="text-gray-400">Techie Intern | Jan 2023 – Apr 2023</p>
+            <p className="mt-2 text-gray-400">Enhanced WordPress websites and optimized user experience.</p>
+          </div>
+
+          
+        </div>
+      </section>
 
 <section id="certifications" className="py-16 px-4 bg-white dark:bg-gray-900">
   <div className="max-w-6xl mx-auto">
@@ -602,36 +627,7 @@ useEffect(() => {
 </section>
 
 
-      {/* Experience Section */}
-      <section id="experience" className="py-20 bg-gradient-to-b from-gray-900 to-black px-8">
-        <motion.h2
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl font-bold text-center mb-6 text-cyan-400"
-        >
-          Experience
-        </motion.h2>
-        <div className="max-w-4xl mx-auto space-y-8">
-        <div className="p-6 bg-gray-800 shadow-md rounded-2xl">
-            <h3 className="text-2xl font-semibold text-cyan-400">Kreotix Innovations</h3>
-            <p className="text-gray-400">Technical Lead | Feb 2025 – May 2025</p>
-            <p className="mt-2 text-gray-400">Managing and executing all technical activities of the startup, including website development, client solutions, and project implementation.</p>
-          </div>
-          <div className="p-6 bg-gray-800 shadow-md rounded-2xl">
-            <h3 className="text-2xl font-semibold text-cyan-400">Delphi-TVS Technologies Limited</h3>
-            <p className="text-gray-400">Engineering Intern | Dec 2024 – Jan 2025</p>
-            <p className="mt-2 text-gray-400">Worked on machine troubleshooting, PLC programming, and CNC maintenance. Developed a QR code-based web app to track machine data.</p>
-          </div>
-          <div className="p-6 bg-gray-800 shadow-md rounded-2xl">
-            <h3 className="text-2xl font-semibold text-cyan-400">Rook Ecom Pvt Ltd</h3>
-            <p className="text-gray-400">Techie Intern | Jan 2023 – Apr 2023</p>
-            <p className="mt-2 text-gray-400">Enhanced WordPress websites and optimized user experience.</p>
-          </div>
-
-          
-        </div>
-      </section>
+      
 
 
       {/* Skills Section */}
