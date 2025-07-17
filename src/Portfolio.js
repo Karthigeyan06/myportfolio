@@ -1,4 +1,6 @@
 import React from 'react';
+import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Linkedin, Github, Mail, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
@@ -27,6 +29,8 @@ import project21Image from './assets/images/robot.png'; // Placeholder for addit
 import project22Image from './assets/images/sha.png'; // Placeholder for additional project image
 import project23Image from './assets/images/invt.png';
 import project24Image from './assets/images/comm.png' // Placeholder for additional project image
+import profile from './assets/images/profile.jpeg'; // Importing profile image
+
 // Placeholder for additional project image
 
 import pythonImg from './assets/images/skills/python.jpg'; // Importing images
@@ -240,6 +244,43 @@ const aboutRef = useRef(null);
 const isInView = useInView(aboutRef, { once: true });
 const [activeCategory, setActiveCategory] = useState("Core");
 
+const certificationData = [
+  {
+    title: "Embedded Software and Hardware Architecture",
+    platform: "Coursera",
+    issuer: "University of Colorado Boulder",
+    year: "2025",
+    link: "https://drive.google.com/file/d/1Vv7kVm1sukB6hD3S-OI2CbaN4h73IIBA/view"
+  },
+  {
+    title: "Linux Embedded System Topics and Projects",
+    platform: "Coursera",
+    issuer: "University of Colorado Boulder",
+    year: "2025",
+    link: "https://www.coursera.org/account/accomplishments/verify/IFQCV39AJN3U"
+  },
+  {
+    title: "IP Addressing and Subnetting",
+    platform: "GeeksforGeeks",
+    issuer: "GeeksforGeeks",
+    year: "2025",
+    link: "https://drive.google.com/file/d/1E-7LVrjOWDM1vYshwIDWkVti9HOJesPx/view"
+  },
+  {
+    title: "System Design Through Verilog",
+    platform: "NPTEL",
+    issuer: "IIT Guwahati",
+    year: "2024",
+    link: "https://drive.google.com/file/d/1OKvodhnFReieT9CZurJFrf5dyIrjNDGO/view"
+  },
+  {
+    title: "Using Python for Automation",
+    platform: "LinkedIn Learning",
+    issuer: "LinkedIn",
+    year: "2023",
+    link: "https://www.linkedin.com/learning/certificates/f7ab8c47cb9bb2f7778a460d8aa62703691cff242082b9177a0b6c7f7bc8892b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BsRmS9HD3QS%2B3dt45V2pBUA%3D%3D"
+  }
+];
 
 const [count, setCount] = useState({
   projects: 0,
@@ -256,7 +297,7 @@ useEffect(() => {
           projects: Math.min(prev.projects + 1, 15),
           internships: Math.min(prev.internships + 1, 3),
           miniProjects: Math.min(prev.miniProjects + 1, 30),
-          cgpa: Math.min((parseFloat(prev.cgpa) + 0.1).toFixed(1), 8.6),
+          cgpa: Math.min((parseFloat(prev.cgpa) + 0.1).toFixed(1), 8.8),
         };
         return {
           projects: Number(next.projects),
@@ -293,58 +334,78 @@ useEffect(() => {
   </div>
 </nav>
 
+{/* Hero Section */}
+<section className="min-h-screen flex items-center justify-center px-6 mt-16">
+  <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6 max-w-7xl w-full">
 
-      {/* Hero Section */}
-      <section className="h-screen flex flex-col items-center justify-center text-center px-4 mt-16 overflow-visible">
-  <motion.h1
-    initial={{ opacity: 0, y: -50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-    className="text-4xl md:text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-pulse z-10 leading-tight font-poppins"
-  >
-    Hello, I'm KARTHIGEYAN
-  </motion.h1>
-  <motion.p
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ delay: 0.5, duration: 1 }}
-    className="text-lg md:text-xl text-gray-400 max-w-2xl z-10 leading-relaxed font-poppins"
-  >
-    Embedded Systems & IoT Enthusiast | Electronics & Communication Engineer
-  </motion.p>
-  
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ delay: 1, duration: 1 }}
-    className="mt-8 flex space-x-8 z-10"
-  >
-    <a href="mailto:karthigeyanganesan06@gmail.com" className="text-gray-400 hover:text-cyan-400 transition"><Mail size={36} /></a>
-    <a href="https://www.linkedin.com/in/karthigeyan-ganesan-203066257/" target="_blank" className="text-gray-400 hover:text-cyan-400 transition"><Linkedin size={36} /></a>
-    <a href="https://github.com/Karthigeyan06" target="_blank" className="text-gray-400 hover:text-cyan-400 transition"><Github size={36} /></a>
-    <a href="tel:+918428804975" target="_blank" className="text-gray-400 hover:text-cyan-400 transition"><Phone size={36} /></a>
-  </motion.div>
+    {/* Left Side – Text */}
+    <div className="text-center md:text-left">
+      {/* Name Heading */}
+      <motion.h1
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-pulse leading-tight font-poppins"
+      >
+        Hello, I'm KARTHIGEYAN
+      </motion.h1>
 
-  <motion.div
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ delay: 1.5, duration: 1 }}
-  className="mt-8"
->
-  <a 
-    href="https://drive.google.com/file/d/1-aYnK_5kCcJfmCrmuoStjw9lSzGHNqDw/view?usp=sharing" //resumelink
-    target="_blank"
-    className="inline-block px-8 py-3 text-lg font-medium text-white bg-transparent border-2 border-white rounded-full hover:bg-white hover:text-black transition-all duration-300 ease-in-out"
-  >
-    View Resume 🡪
-  </a>
-</motion.div>
+      {/* Subtitle */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="text-lg md:text-xl text-gray-400 leading-relaxed font-poppins mb-6"
+      >
+        Embedded Systems & IoT Enthusiast | Electronics & Communication Engineer
+      </motion.p>
 
+      {/* Social Icons */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+        className="flex justify-center md:justify-start space-x-6 mb-6"
+      >
+        <a href="mailto:karthigeyanganesan06@gmail.com" className="text-gray-400 hover:text-cyan-400 transition-transform hover:scale-110"><Mail size={28} /></a>
+        <a href="https://www.linkedin.com/in/karthigeyan-ganesan-203066257/" target="_blank" className="text-gray-400 hover:text-cyan-400 transition-transform hover:scale-110"><Linkedin size={28} /></a>
+        <a href="https://github.com/Karthigeyan06" target="_blank" className="text-gray-400 hover:text-cyan-400 transition-transform hover:scale-110"><Github size={28} /></a>
+        <a href="tel:+918428804975" className="text-gray-400 hover:text-cyan-400 transition-transform hover:scale-110"><Phone size={28} /></a>
+      </motion.div>
 
+      {/* Resume Button */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
+      >
+        <a 
+          href="https://drive.google.com/file/d/1-aYnK_5kCcJfmCrmuoStjw9lSzGHNqDw/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-6 py-3 text-base md:text-lg font-semibold text-white border-2 border-cyan-400 rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300 shadow-lg"
+        >
+          View Resume <ArrowRight className="w-5 h-5 ml-2" />
+        </a>
+      </motion.div>
+    </div>
 
-
-
-
+    {/* Right Side – Profile Image */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
+      className="flex justify-center md:justify-end"
+    >
+      <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl">
+        <img
+          src={profile}
+          alt="Karthigeyan Ganesan"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </motion.div>
+  </div>
 </section>
 
 
@@ -404,8 +465,17 @@ useEffect(() => {
     </h3>
     <p className="text-cyan-400 text-lg font-semibold mb-1">2022 - 2026</p>
     <p className="text-gray-400 mb-4">Rajalakshmi Institute of Technology, Chennai</p>
-    <p className="text-gray-300 font-medium">Current CGPA: <span className="text-cyan-400 font-bold">8.6</span> (Till 6th Semester)</p>
+    <p className="text-gray-300 font-medium">Current CGPA: <span className="text-cyan-400 font-bold">8.8</span> (Till 6th Semester)</p>
   </div>
+    {/* Class 12 Education Details 
+  <div className="max-w-4xl mx-auto bg-gray-800 rounded-2xl shadow-lg p-8">
+    <h3 className="text-2xl sm:text-3xl font-bold text-white font-poppins mb-2">
+      Class 12 - State Board
+    </h3>
+    <p className="text-cyan-400 text-lg font-semibold mb-1">2022</p>
+    <p className="text-gray-400 mb-4">Bharathidaasan Matric. hr. sec. School, Kanchipuram</p>
+    <p className="text-gray-300 font-medium">Percentage: <span className="text-cyan-400 font-bold">93.2</span></p>
+  </div>*/}
 </section>
 
 
@@ -464,9 +534,9 @@ useEffect(() => {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-4 py-2 bg-cyan-500 text-black font-semibold rounded-md hover:bg-pink-500 hover:text-white transition duration-300"
+              className="inline-flex items-center gap-1 px-4 py-2 bg-cyan-500 text-black font-semibold rounded-md hover:bg-pink-500 hover:text-white transition duration-300"
             >
-              View Project 🡭
+              View Project <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
         </motion.div>
@@ -477,10 +547,57 @@ useEffect(() => {
     <a
       href="https://github.com/Karthigeyan06"
       target="_blank"
-      className="inline-block px-10 py-3 text-black font-bold bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full shadow-lg hover:from-pink-500 hover:to-purple-600 hover:text-white transition-transform transform hover:scale-105"
+      className="inline-flex items-center gap-1 px-10 py-3 text-black font-bold bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full shadow-lg hover:from-pink-500 hover:to-purple-600 hover:text-white transition-transform transform hover:scale-105"
     >
-      Explore More Projects on GitHub 🡭
+      Explore More Projects on GitHub <ArrowUpRight className="w-4 h-4" />
     </a>
+  </div>
+</section>
+
+
+<section id="certifications" className="py-16 px-4 bg-white dark:bg-gray-900">
+  <div className="max-w-6xl mx-auto">
+    <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl font-bold text-center mb-6 text-cyan-400"
+        >
+          Certifications
+        </motion.h2>
+    <div className="grid md:grid-cols-2 gap-8">
+      {certificationData.map((cert, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.2 }}
+          viewport={{ once: true }}
+          className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+        >
+          <h3 className="text-xl font-semibold text-cyan-400 mb-1">
+            {cert.title}
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            Platform: <span className="font-medium">{cert.platform}</span>
+          </p>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            Issuer: <span className="font-medium">{cert.issuer}</span>
+          </p>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            Year: <span className="font-medium">{cert.year}</span>
+          </p>
+          <a
+            href={cert.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 mt-4 px-3 py-1 bg-cyan-500 text-black font-semibold rounded-md hover:bg-pink-500 hover:text-white transition duration-300"
+          >
+            View Certificate <ArrowUpRight className="w-4 h-4" />
+          </a>
+        </motion.div>
+      ))}
+    </div>
   </div>
 </section>
 
@@ -498,7 +615,7 @@ useEffect(() => {
         <div className="max-w-4xl mx-auto space-y-8">
         <div className="p-6 bg-gray-800 shadow-md rounded-2xl">
             <h3 className="text-2xl font-semibold text-cyan-400">Kreotix Innovations</h3>
-            <p className="text-gray-400">Technical Lead | Feb 2025 – Present</p>
+            <p className="text-gray-400">Technical Lead | Feb 2025 – May 2025</p>
             <p className="mt-2 text-gray-400">Managing and executing all technical activities of the startup, including website development, client solutions, and project implementation.</p>
           </div>
           <div className="p-6 bg-gray-800 shadow-md rounded-2xl">
