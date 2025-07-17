@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/myportfolio/static/css/main.94dd426d.css",
-    "main.js": "/myportfolio/static/js/main.58a8d3b3.js",
+    "main.css": "/myportfolio/static/css/main.86b6ac13.css",
+    "main.js": "/myportfolio/static/js/main.08862d21.js",
     "static/media/project8.jpg": "/myportfolio/static/media/project8.d6e5ddbeec22a92eef2c.jpg",
     "static/media/project4.jpg": "/myportfolio/static/media/project4.19f15133d4feabba25c1.jpg",
     "static/media/project3.png": "/myportfolio/static/media/project3.a11bdcb51966804f693a.png",
+    "static/media/profile.jpeg": "/myportfolio/static/media/profile.0e8613ac804648c330ba.jpeg",
     "static/media/stm32_blue_pill.png": "/myportfolio/static/media/stm32_blue_pill.e671b5d322866bce0165.png",
     "static/media/arduino_nano.png": "/myportfolio/static/media/arduino_nano.db6c4e24461c3700a696.png",
     "static/media/sha.png": "/myportfolio/static/media/sha.7274c29d4745b9d30d64.png",
@@ -48,11 +49,11 @@
     "static/media/labview.png": "/myportfolio/static/media/labview.b1909b4c90962e05e444.png",
     "static/media/quartus.png": "/myportfolio/static/media/quartus.47a26c8e55825c332d09.png",
     "index.html": "/myportfolio/index.html",
-    "main.94dd426d.css.map": "/myportfolio/static/css/main.94dd426d.css.map",
-    "main.58a8d3b3.js.map": "/myportfolio/static/js/main.58a8d3b3.js.map"
+    "main.86b6ac13.css.map": "/myportfolio/static/css/main.86b6ac13.css.map",
+    "main.08862d21.js.map": "/myportfolio/static/js/main.08862d21.js.map"
   },
   "entrypoints": [
-    "static/css/main.94dd426d.css",
-    "static/js/main.58a8d3b3.js"
+    "static/css/main.86b6ac13.css",
+    "static/js/main.08862d21.js"
   ]
 }
