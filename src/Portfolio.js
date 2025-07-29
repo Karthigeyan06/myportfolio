@@ -63,8 +63,8 @@ import kicadImg from './assets/images/skills/kicad.png';
 import keilImag from './assets/images/skills/keil.png';
 import esp32Img from './assets/images/skills/esp32.png';
 import javaImg from './assets/images/skills/java.png';
-import linuxImg from './assets/images/skills/linux.png' // Importing Java image
-
+import linuxImg from './assets/images/skills/linux.png'; // Importing Java image
+import gitImg from './assets/images/skills/gitlogo.png';
 
 export default function Portfolio() {
   const projectData = [
@@ -698,7 +698,8 @@ useEffect(() => {
           { name: "ISPSoft", img: ispSoftImg },
           { name: "KICAD", img: kicadImg },
           { name: "KEIL UVISION", img: keilImag },
-          { name: "Linux", img: linuxImg }, // Added Linux to the skills list
+          { name: "Linux", img: linuxImg },
+          { name: "GIT", img: gitImg } // Added Linux to the skills list
         ],
       },
     ].map((category, idx) => (
