@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/myportfolio/static/css/main.5935b6d4.css",
-    "main.js": "/myportfolio/static/js/main.651c21a8.js",
+    "main.js": "/myportfolio/static/js/main.faf2ae28.js",
     "static/media/project8.jpg": "/myportfolio/static/media/project8.d6e5ddbeec22a92eef2c.jpg",
     "static/media/project4.jpg": "/myportfolio/static/media/project4.19f15133d4feabba25c1.jpg",
     "static/media/project3.png": "/myportfolio/static/media/project3.a11bdcb51966804f693a.png",
@@ -35,6 +35,7 @@
     "static/media/verilog.jpg": "/myportfolio/static/media/verilog.9ef5477597cf527669f7.jpg",
     "static/media/winp.png": "/myportfolio/static/media/winp.752fdad13caa319fc24b.png",
     "static/media/auction.png": "/myportfolio/static/media/auction.e292e42043c6f0b07fc5.png",
+    "static/media/gitlogo.png": "/myportfolio/static/media/gitlogo.b26cb7628cdaf565fc99.png",
     "static/media/elec.png": "/myportfolio/static/media/elec.632f38939277ee084964.png",
     "static/media/simatic_manager.png": "/myportfolio/static/media/simatic_manager.d158c55fa0560adde23f.png",
     "static/media/project7.jpg": "/myportfolio/static/media/project7.4bf5ddebc1e31221fa3f.jpg",
@@ -50,10 +51,10 @@
     "static/media/quartus.png": "/myportfolio/static/media/quartus.47a26c8e55825c332d09.png",
     "index.html": "/myportfolio/index.html",
     "main.5935b6d4.css.map": "/myportfolio/static/css/main.5935b6d4.css.map",
-    "main.651c21a8.js.map": "/myportfolio/static/js/main.651c21a8.js.map"
+    "main.faf2ae28.js.map": "/myportfolio/static/js/main.faf2ae28.js.map"
   },
   "entrypoints": [
     "static/css/main.5935b6d4.css",
-    "static/js/main.651c21a8.js"
+    "static/js/main.faf2ae28.js"
   ]
 }
