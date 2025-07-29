@@ -279,6 +279,13 @@ const certificationData = [
     issuer: "LinkedIn",
     year: "2023",
     link: "https://www.linkedin.com/learning/certificates/f7ab8c47cb9bb2f7778a460d8aa62703691cff242082b9177a0b6c7f7bc8892b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BsRmS9HD3QS%2B3dt45V2pBUA%3D%3D"
+  },
+  {
+    title: "Networking and Storage Essentials",
+    platform: "EdX",
+    issuer: "IBM",
+    year: "2025",
+    link: "https://courses.edx.org/certificates/30d659616d25482587ba61e388391600"
   }
 ];
 
