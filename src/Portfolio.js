@@ -29,8 +29,8 @@ import project21Image from './assets/images/robot.png'; // Placeholder for addit
 import project22Image from './assets/images/sha.png'; // Placeholder for additional project image
 import project23Image from './assets/images/invt.png';
 import project24Image from './assets/images/comm.png' // Placeholder for additional project image
-import profile from './assets/images/profile.jpeg'; // Importing profile image
-
+import profile from './assets/images/profilev2.jpeg'; // Importing profile image
+import project25Image from './assets/images/pipro.jpg';
 // Placeholder for additional project image
 
 import pythonImg from './assets/images/skills/python.jpg'; // Importing images
@@ -65,9 +65,18 @@ import esp32Img from './assets/images/skills/esp32.png';
 import javaImg from './assets/images/skills/java.png';
 import linuxImg from './assets/images/skills/linux.png'; // Importing Java image
 import gitImg from './assets/images/skills/gitlogo.png';
+import piImg from './assets/images/skills/rasp.webp';
+import fImg from './assets/images/skills/f360.png';
 
 export default function Portfolio() {
   const projectData = [
+    {
+      image: project25Image, // Local image for Project 9
+      url: 'https://github.com/Karthigeyan06/project9', // URL for Project 9
+      title: '2D Contour Detection and 3D Depth Mapping Using Raspberry Pi and OpenCV',
+      category: 'Core',
+      description: 'Developed a Raspberry Pi-based system that captures images, detects contours in 2D, and generates 3D depth maps using OpenCV. The system utilizes computer vision techniques to analyze and visualize spatial information from images.',
+    },
     {
       image: project19Image, // Local image for Project 1
       url: 'https://github.com/Karthigeyan06/project1', // URL for Project 1
@@ -236,6 +245,7 @@ export default function Portfolio() {
       category: 'IT',
       description: 'Developed a website for Kreotix Innovations using HTML, CSS, and JavaScript. The website showcases the company\'s services, projects, and provides contact information.',
     },
+    
 
     
   ];
@@ -286,6 +296,13 @@ const certificationData = [
     issuer: "IBM",
     year: "2025",
     link: "https://courses.edx.org/certificates/30d659616d25482587ba61e388391600"
+  },
+  {
+    title: "Embedded Systems using C",
+    platform: "Coursera",
+    issuer: "EDUCBA",
+    year: "2025",
+    link: "https://www.coursera.org/account/accomplishments/verify/6NE9J07PFG8O"
   }
 ];
 
@@ -669,6 +686,7 @@ useEffect(() => {
       {
         title: "Microcontrollers & Boards",
         skills: [
+          { name: "Raspberry Pi", img: piImg },
           { name: "Arduino Uno", img: arduinoUnoImg },
           { name: "Arduino Nano", img: arduinoNanoImg },
           { name: "Raspberry Pi Pico", img: raspberryPiPicoImg },
@@ -699,7 +717,8 @@ useEffect(() => {
           { name: "KICAD", img: kicadImg },
           { name: "KEIL UVISION", img: keilImag },
           { name: "Linux", img: linuxImg },
-          { name: "GIT", img: gitImg } // Added Linux to the skills list
+          { name: "GIT", img: gitImg },
+          { name: "FUSION360", img: fImg } // Added Linux to the skills list
         ],
       },
     ].map((category, idx) => (
