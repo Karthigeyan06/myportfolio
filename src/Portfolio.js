@@ -392,7 +392,7 @@ useEffect(() => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="text-lg md:text-xl text-gray-400 leading-relaxed font-poppins mb-4"
+        className="text-lg md:text-xl text-gray-400 leading-relaxed font-poppins mb-4 font-bold"
       >
         Project Intern at embedUR Systems
       </motion.p>
