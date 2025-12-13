@@ -585,6 +585,11 @@ useEffect(() => {
         </motion.h2>
         <div className="max-w-4xl mx-auto space-y-8">
         <div className="p-6 bg-gray-800 shadow-md rounded-2xl">
+            <h3 className="text-2xl font-semibold text-cyan-400">embedUR Systems</h3>
+            <p className="text-gray-400">Project Intern | Nov 2025 – Present</p>
+            <p className="mt-2 text-gray-400">Linux, IIoT & IEE 802.11</p>
+          </div>
+        <div className="p-6 bg-gray-800 shadow-md rounded-2xl">
             <h3 className="text-2xl font-semibold text-cyan-400">Kreotix Innovations</h3>
             <p className="text-gray-400">Technical Lead | Feb 2025 – May 2025</p>
             <p className="mt-2 text-gray-400">Managing and executing all technical activities of the startup, including website development, client solutions, and project implementation.</p>
