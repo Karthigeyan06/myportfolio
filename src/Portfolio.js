@@ -388,13 +388,22 @@ useEffect(() => {
         Hello, I'm KARTHIGEYAN
       </motion.h1>
 
+       <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="text-lg md:text-xl text-gray-400 leading-relaxed font-poppins mb-4"
+      >
+        Project Intern at embedUR Systems
+      </motion.p>
+
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
         className="text-lg md:text-xl text-gray-400 leading-relaxed font-poppins mb-4"
       >
-        Embedded Systems & IoT Enthusiast | Electronics & Communication Engineer | Linux | Computer Networking 
+        Embedded Systems & IoT Engineer | Electronics & Communication Engineer | Linux | Computer Networking | IIoT
       </motion.p>
 
       <motion.div
