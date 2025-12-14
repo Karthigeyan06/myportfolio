@@ -616,7 +616,7 @@ const Projects = () => {
         {!showAll && (
           <div className="text-center mt-8">
             <a
-  href="projects.html"
+  href="/projects.html"
   className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl font-poppins"
 >
   View All Projects <ArrowUpRight className="w-4 h-4 ml-2" />
