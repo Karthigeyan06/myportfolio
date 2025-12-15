@@ -15,7 +15,8 @@
   <nav class="navbar">
     <div class="container">
       <a href="https://karthigeyan06.github.io/myportfolio/" class="logo">KG</a>
-      <ul class="nav-links">
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+      <ul class="nav-links" id="navLinks">
         <li><a href="https://karthigeyan06.github.io/myportfolio/">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="certificates.html" class="active">Certifications</a></li>
@@ -54,5 +55,21 @@
       </div>
     </div>
   </section>
+
+  <script>
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileMenuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('mobile');
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('mobile');
+      });
+    });
+  </script>
 </body>
 </html>
