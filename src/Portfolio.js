@@ -774,7 +774,7 @@ const Contact = () => {
           <a href="https://github.com/Karthigeyan06" target="_blank" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
             <Github size={32} />
           </a>
-          <a href="https://www.hackster.io/karthigeyan06" target="_blank" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
+          <a href="https://www.hackster.io/karthigeyanganesan06" target="_blank" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
               <line x1="9" y1="9" x2="9" y2="15"></line>
@@ -880,7 +880,7 @@ export default function Portfolio() {
       <Experience />
       <Certifications />
       <Contact />
-      <footer className="py-8 bg-black text-center text-gray-500 border-t border-gray-700 font-poppins">
+      <footer className="py-8 bg-black text-center text-gray-500 border-t border-gray-700 font-space-grotesk">
         &copy; 2025 Karthigeyan Ganesan. All rights reserved.
       </footer>
     </div>
