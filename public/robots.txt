@@ -1,3 +1,18 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /private/
+
+Sitemap: https://karthigeyan06.github.io/myportfolio/sitemap.xml
+
+# Crawl-delay for all bots (in seconds)
+Crawl-delay: 1
+
+# Rules for specific bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
