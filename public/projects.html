@@ -15,7 +15,8 @@
   <nav class="navbar">
     <div class="container">
       <a href="https://karthigeyan06.github.io/myportfolio/" class="logo">KG</a>
-      <ul class="nav-links">
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+      <ul class="nav-links" id="navLinks">
         <li><a href="https://karthigeyan06.github.io/myportfolio/">Home</a></li>
         <li><a href="projects.html" class="active">Projects</a></li>
         <li><a href="certificates.html">Certifications</a></li>
@@ -30,108 +31,115 @@
 
   <section class="section">
     <div class="container">
-      <div class="grid grid-3">
-        <div class="card">
+      <!-- Project Filter Toggle -->
+      <div class="filter-toggle">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="core">Core Projects</button>
+        <button class="filter-btn" data-filter="it">IT Projects</button>
+      </div>
+
+      <div class="grid grid-3" id="projectsGrid">
+        <div class="card" data-category="core">
           <img src="./assets/images/pipro.jpg" alt="2D Contour Detection & 3D Depth Mapping System">
           <h3>2D Contour Detection & 3D Depth Mapping System</h3>
           <p>Raspberry Pi-based system for 2D contour detection and 3D depth mapping using OpenCV.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="core">
           <img src="./assets/images/robot.png" alt="Internal Logistics Autonomous Robot">
           <h3>Internal Logistics Autonomous Robot</h3>
           <p>Autonomous robot using Raspberry Pi for warehouse navigation with sensors and pathfinding.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="core">
           <img src="./assets/images/sha.png" alt="AI-Based Structural Health Monitoring System">
           <h3>AI-Based Structural Health Monitoring System</h3>
           <p>AI-integrated system for structural health monitoring with sensors and ML for failure prediction.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="core">
           <img src="./assets/images/project5.jpg" alt="Autonomous GPS-Based Delivery Robot">
           <h3>Autonomous GPS-Based Delivery Robot</h3>
           <p>GPS-equipped autonomous delivery robot with sensors for secure navigation.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="core">
           <img src="./assets/images/project1.jpg" alt="Four-Axis Robotic Arm with Precision Control">
           <h3>Four-Axis Robotic Arm with Precision Control</h3>
           <p>Four-axis robotic arm controlled by joysticks and mobile for precise tasks.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="core">
           <img src="./assets/images/project8.jpg" alt="Emergency Communication & Alert System">
           <h3>Emergency Communication & Alert System</h3>
           <p>Portable communication device for disasters with GPS and voice capabilities.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="it">
           <img src="./assets/images/auction.png" alt="IPL Auction System Using Python">
           <h3>IPL Auction System Using Python</h3>
           <p>Python-based IPL auction system for bidding and team management.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="it">
           <img src="./assets/images/winp.png" alt="Cricket Match Win Predictor Using Java">
           <h3>Cricket Match Win Predictor Using Java</h3>
           <p>Java application predicting cricket match outcomes using historical data and ML algorithms.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="it">
           <img src="./assets/images/invt.png" alt="Inventory Management System Using Python and Sqlite">
           <h3>Inventory Management System Using Python and Sqlite</h3>
           <p>Python and SQLite system for inventory tracking, supplier management, and reports.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="core">
           <img src="./assets/images/comm.png" alt="Simulated Message Communication through Network between Machines">
           <h3>Simulated Message Communication through Network between Machines</h3>
           <p>Linux-based simulation of message communication between machines using TCP/IP protocols.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="core">
           <img src="./assets/images/project6.jpg" alt="Dual-Mode Wireless Rover: Real-Time Control and Environmental Sensing">
           <h3>Dual-Mode Wireless Rover: Real-Time Control and Environmental Sensing</h3>
           <p>Arduino-based rover with real-time control and environmental sensing.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="core">
           <img src="./assets/images/project7.jpg" alt="Automatic Balance System for 2-Wheel Bot Using 3-Axis Gyroscope">
           <h3>Automatic Balance System for 2-Wheel Bot Using 3-Axis Gyroscope</h3>
           <p>2-wheel robot balancing system using 3-axis gyroscope for stability.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="it">
           <img src="./assets/images/moon.png" alt="Moon Phase Detector Using Python and OpenCV">
           <h3>Moon Phase Detector Using Python and OpenCV</h3>
           <p>Python program detecting moon phases using OpenCV and ML.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="it">
           <img src="./assets/images/elec.png" alt="ElectroRookie: A Calculator">
           <h3>ElectroRookie: A Calculator</h3>
           <p>Python-based calculator for electronics calculations.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="it">
           <img src="./assets/images/leaf.png" alt="Leaf Disease Detection Using Python and OpenCV">
           <h3>Leaf Disease Detection Using Python and OpenCV</h3>
           <p>Python program detecting leaf diseases using OpenCV and ML.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="it">
           <img src="./assets/images/lib.png" alt="Library Management System Using Python and MySQL">
           <h3>Library Management System Using Python and MySQL</h3>
           <p>Python and MySQL system for library book management and reports.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="it">
           <img src="./assets/images/attend.png" alt="Attendance Management System Using Python and MySQL with QR Code">
           <h3>Attendance Management System Using Python and MySQL with QR Code</h3>
           <p>Python and MySQL attendance system with QR code integration.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="it">
           <img src="./assets/images/audio.png" alt="Audio Player using Python packages">
           <h3>Audio Player using Python packages</h3>
           <p>Python audio player with playback controls and user interface.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="it">
           <img src="./assets/images/bank.png" alt="Bank Management System Using Python and MySQL">
           <h3>Bank Management System Using Python and MySQL</h3>
           <p>Python and MySQL system for bank account management and transactions.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="it">
           <img src="./assets/images/it.png" alt="Website for My Youtube Channel">
           <h3>Website for My Youtube Channel</h3>
           <p>Personal website for YouTube channel using HTML and CSS.</p>
         </div>
-        <div class="card">
+        <div class="card" data-category="it">
           <img src="./assets/images/ki.png" alt="Website for Kreotix Innovations">
           <h3>Website for Kreotix Innovations</h3>
           <p>Website for Kreotix Innovations using HTML, CSS, and JavaScript.</p>
@@ -139,5 +147,46 @@
       </div>
     </div>
   </section>
+
+  <script>
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileMenuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('mobile');
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('mobile');
+      });
+    });
+
+    // Project filtering functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        // Filter projects
+        projectCards.forEach(card => {
+          if (filterValue === 'all') {
+            card.style.display = 'block';
+          } else {
+            const cardCategory = card.getAttribute('data-category');
+            card.style.display = cardCategory === filterValue ? 'block' : 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>

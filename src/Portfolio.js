@@ -221,6 +221,9 @@ const Hero = () => {
           <p className="text-sm md:text-xl lg:text-2xl text-gray-300 mb-4 font-semibold font-space-grotesk hidden md:block">
             Embedded Systems & IoT Engineer
           </p>
+          <p className="text-xs md:text-base text-gray-300 mb-2 font-semibold font-space-grotesk hidden md:block">
+            Project Intern at embedUR systems
+          </p>
           <p className="text-xs md:text-base text-gray-400 mb-4 md:mb-8 max-w-lg mx-auto md:mx-0 font-space-grotesk leading-relaxed hidden md:block">
             Crafting intelligent embedded solutions with cutting-edge technologies in Linux, IoT, and robotics.
           </p>
@@ -244,6 +247,9 @@ const Hero = () => {
             <div className="text-left">
               <p className="text-sm text-gray-300 mb-2 font-semibold font-space-grotesk">
                 Embedded Systems & IoT Engineer
+              </p>
+              <p className="text-xs text-gray-300 mb-2 font-semibold font-space-grotesk">
+                Project Intern at embedUR systems
               </p>
               <p className="text-xs text-gray-400 max-w-xs font-space-grotesk leading-relaxed">
                 Crafting intelligent embedded solutions with cutting-edge technologies in Linux, IoT, and robotics.
@@ -306,18 +312,25 @@ const About = () => {
         <p className="text-base text-gray-300 mb-6 leading-relaxed font-poppins">
           As an Embedded Systems & IoT Engineer, I specialize in developing robust, scalable solutions for industrial and consumer applications. With expertise in microcontrollers, Linux systems, and computer vision, I bridge the gap between hardware and software to create innovative products.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <div className="bg-gray-800/50 p-4 rounded-xl shadow-lg border border-gray-700">
             <h3 className="text-lg font-semibold text-cyan-400 mb-2 font-space-grotesk">Expertise</h3>
-            <p className="text-gray-400 font-poppins">Embedded C, Python, OpenCV, Robotics</p>
+            <p className="text-gray-400 font-poppins">Embedded C, Python, OpenCV, Robotics, IoT systems</p>
           </div>
           <div className="bg-gray-800/50 p-4 rounded-xl shadow-lg border border-gray-700">
             <h3 className="text-lg font-semibold text-cyan-400 mb-2 font-space-grotesk">Passion</h3>
             <p className="text-gray-400 font-poppins">Building intelligent IoT ecosystems</p>
           </div>
           <div className="bg-gray-800/50 p-4 rounded-xl shadow-lg border border-gray-700">
-            <h3 className="text-lg font-semibold text-cyan-400 mb-2 font-space-grotesk">Achievements</h3>
+            <h3 className="text-lg font-semibold text-cyan-400 mb-2 font-space-grotesk">Acedemic Note</h3>
             <p className="text-gray-400 font-poppins">15+ projects, 3 internships, 8.8 CGPA</p>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="bg-gray-800/50 p-4 rounded-xl shadow-lg border border-gray-700 w-full md:w-2/3">
+            <h3 className="text-lg font-semibold text-cyan-400 mb-2 font-space-grotesk">Education</h3>
+            <p className="text-gray-400 font-poppins font-semibold">B.E. Electronics and Communication Engineering 2022-2026</p>
+            <p className="text-gray-400 font-poppins">Rajalakshmi Institute of Technology, Chennai</p>
           </div>
         </div>
       </div>
@@ -331,9 +344,9 @@ const Skills = () => {
   const isInView = useInView(ref, { once: true });
 
   const skillsData = {
-    primary: ['Embedded C', 'Python', 'Linux', 'STM32', 'ESP32', 'Raspberry Pi', 'OpenCV'],
+    primary: ['Embedded C', 'Python', 'Linux', 'STM32', 'ESP32', 'Raspberry Pi', 'OpenCV', 'IoT', 'Robotics', 'Computer Vision'],
     secondary: ['Arduino', 'PLCs (Siemens, Mitsubishi)', 'MATLAB', 'Verilog', 'SQL', 'Git'],
-    tools: ['STM32CubeIDE', 'Arduino IDE', 'KiCad', 'Quartus', 'Multisim', 'Fusion 360']
+    tools: ['STM32CubeIDE', 'Arduino IDE', 'KiCad', 'Quartus', 'Multisim', 'Fusion 360', 'Wireshark', 'Keil UVision', 'MATLAB Simulink']
   };
 
   return (
@@ -761,6 +774,14 @@ const Contact = () => {
           <a href="https://github.com/Karthigeyan06" target="_blank" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
             <Github size={32} />
           </a>
+          <a href="https://www.hackster.io/karthigeyan06" target="_blank" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="9" y1="9" x2="9" y2="15"></line>
+              <line x1="15" y1="9" x2="15" y2="15"></line>
+              <line x1="9" y1="12" x2="15" y2="12"></line>
+            </svg>
+          </a>
           <a href="tel:+918428804975" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
             <Phone size={32} />
           </a>
@@ -832,13 +853,13 @@ const Navigation = () => {
             exit={{ y: -100, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <ul className="py-4 px-4 space-y-4">
-              <li><a href="#about" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-2">About</a></li>
-              <li><a href="#skills" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-2">Skills</a></li>
-              <li><a href="#projects" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-2">Projects</a></li>
-              <li><a href="#experience" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-2">Experience</a></li>
-              <li><a href="#certifications" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-2">Certifications</a></li>
-              <li><a href="#contact" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-2">Contact</a></li>
+            <ul className="py-2 px-4 space-y-1">
+              <li><a href="#about" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">About</a></li>
+              <li><a href="#skills" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Skills</a></li>
+              <li><a href="#projects" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Projects</a></li>
+              <li><a href="#experience" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Experience</a></li>
+              <li><a href="#certifications" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Certifications</a></li>
+              <li><a href="#contact" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Contact</a></li>
             </ul>
           </motion.div>
         </motion.div>
