@@ -880,7 +880,10 @@ export default function Portfolio() {
       <Experience />
       <Certifications />
       <Contact />
-      <footer className="py-8 bg-black text-center text-gray-500 border-t border-gray-700 font-space-grotesk">
+      <footer
+        className="py-8 bg-black text-center text-gray-500 border-t border-gray-700 font-space-grotesk"
+        style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+      >
         &copy; 2025 Karthigeyan Ganesan. All rights reserved.
       </footer>
     </div>
