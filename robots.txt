@@ -1,6 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Allow: /
+Allow: /myportfolio/
 Disallow: /private/
 
 Sitemap: https://karthigeyan06.github.io/myportfolio/sitemap.xml
@@ -10,9 +10,9 @@ Crawl-delay: 1
 
 # Rules for specific bots
 User-agent: Googlebot
-Allow: /
+Allow: /myportfolio/
 Crawl-delay: 0
 
 User-agent: Bingbot
-Allow: /
+Allow: /myportfolio/
 Crawl-delay: 1
