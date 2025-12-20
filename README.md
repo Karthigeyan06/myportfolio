@@ -1,74 +1,13 @@
-<<<<<<< HEAD
-# Portfolio
-=======
-# Getting Started with Create React App
+I am an Embedded Systems and IoT Engineer with a strong foundation in electronics, firmware development, and system-level integration, currently pursuing a Bachelor of Engineering in Electronics and Communication Engineering (2022–2026). My work focuses on designing reliable, scalable, and real-world embedded solutions that bridge hardware and software.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I have hands-on experience working with microcontrollers and embedded platforms including STM32, ESP32, Arduino, and Raspberry Pi, where I develop bare-metal and RTOS-based firmware using Embedded C and Python. My projects involve low-level peripheral interfacing (GPIO, ADC, PWM, UART, SPI, I²C), sensor integration, power management, and real-time data acquisition.
 
-## Available Scripts
+As a Project Intern at embedUR systems, I work on industry-grade embedded and IoT applications, gaining exposure to production-oriented development workflows, hardware–software co-design, and debugging of complex embedded systems. My internship experience has strengthened my understanding of robust firmware design, modular architecture, and real-world constraints such as latency, reliability, and resource optimization.
 
-In the project directory, you can run:
+My project portfolio spans autonomous robotics, IoT-based monitoring systems, and AI-assisted embedded applications, including autonomous robots, smart infrastructure monitoring, fault detection systems, GPS-based tracking, and intelligent control systems. I have also implemented computer vision pipelines using OpenCV for tasks such as contour detection, depth estimation, object analysis, and vision-guided automation.
 
-### `npm start`
+I am proficient in Linux-based embedded development, system-level debugging, and networking fundamentals. I regularly work with tools such as STM32CubeIDE, Arduino IDE, Git, KiCad, Fusion 360, MATLAB/Simulink, Wireshark, and Multisim, enabling me to move seamlessly from circuit design and PCB-level understanding to firmware and application development.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Beyond embedded hardware, I have developed software-driven systems using Python, Java, SQL, and TCP/IP, building end-to-end solutions that include dashboards, data logging, and communication interfaces. This allows me to design complete systems rather than isolated components.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> f14a612 (Initial commit)
+I am deeply interested in embedded Linux, edge AI, robotics, and industrial IoT, with a long-term goal of working on high-impact embedded platforms and intelligent devices. I value clean architecture, documentation, and continuous learning, and I actively strengthen my skills through certifications, experimentation, and complex self-driven projects.
