@@ -170,6 +170,139 @@ const Certifications = () => {
   );
 };
 
+// Publications Component
+const Publications = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const [selectedPub, setSelectedPub] = useState(null);
+
+  const publicationsData = [
+    {
+      title: 'Dynamic Audio Watermarking Based Anti-Piracy Algorithm for Secure Multimedia Distribution',
+      authors: 'Karthigeyan Ganesan',
+      venue: '',
+      year: '2025',
+      type: 'Preprint',
+      doi: 'https://doi.org/10.5281/zenodo.18029798',
+      description: ' Proposes a dynamic audio watermarking algorithm to enhance security in multimedia distribution, focusing on robustness against common audio processing attacks.',
+      tags: ['Audio Watermarking', 'Multimedia Security', 'Signal Processing', 'Python'],
+      featured: true
+    },
+    {
+      title: 'Vision-Based 2D-to-3D Object Reconstruction and G-code Generation Using Raspberry Pi',
+      authors: 'Karthigeyan Ganesan',
+      venue: 'Zenodo CERN',
+      year: '2025',
+      type: 'Technical Report',
+      doi: 'https://doi.org/10.5281/zenodo.18032945',
+      description: 'Presents a Raspberry Pi-based system for 2D-to-3D object reconstruction using computer vision techniques, enabling G-code generation for 3D printing applications.',
+      tags: ['3D Reconstruction', 'Computer Vision', 'Raspberry Pi', 'OpenCV'],
+      featured: true
+    }
+  ];
+
+  return (
+    <motion.section
+      id="publications"
+      ref={ref}
+      className="py-12 md:py-16 px-4 md:px-8"
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="max-w-6xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-3xl font-semibold text-center mb-8 text-cyan-400 font-space-grotesk tracking-tight"
+        >
+          Publications
+        </motion.h2>
+        <div className="space-y-4">
+          {publicationsData.map((pub, index) => (
+            <motion.div
+              key={index}
+              className="bg-gray-800/50 rounded-xl p-4 md:p-6 shadow-lg border border-gray-700 backdrop-blur-sm"
+              whileHover={{ y: -2 }}
+            >
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-2 font-space-grotesk">{pub.title}</h3>
+                  <p className="text-gray-300 mb-1 font-poppins text-sm">{pub.authors}</p>
+                  <p className="text-gray-400 mb-2 font-poppins text-sm">{pub.venue} • {pub.year} • {pub.type}</p>
+                  <p className="text-gray-300 mb-3 font-poppins text-sm">{pub.description}</p>
+                  <div className="flex flex-wrap gap-1 mb-3">
+                    {pub.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="px-2 py-1 bg-cyan-500 text-black text-xs rounded-full font-poppins">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <button
+                  onClick={() => setSelectedPub(pub)}
+                  className="inline-flex items-center gap-1 px-3 py-1 bg-purple-500 text-white font-semibold rounded-full hover:bg-purple-600 transition-all duration-300 font-poppins text-sm min-h-[36px] mt-2 md:mt-0"
+                >
+                  View Details <ArrowUpRight className="w-3 h-3" />
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Modal */}
+      {selectedPub && (
+        <motion.div
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setSelectedPub(null)}
+        >
+          <motion.div
+            className="bg-gray-800/90 rounded-xl p-6 max-w-lg w-full mx-4 border border-gray-700 backdrop-blur-sm"
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-xl font-semibold text-cyan-400 mb-2 font-space-grotesk">{selectedPub.title}</h3>
+            <p className="text-gray-300 mb-1 font-poppins">{selectedPub.authors}</p>
+            <p className="text-gray-400 mb-1 font-poppins">{selectedPub.venue} • {selectedPub.year}</p>
+            <p className="text-gray-400 mb-3 font-poppins">{selectedPub.type}</p>
+            <p className="text-gray-300 mb-4 font-poppins">{selectedPub.description}</p>
+            <div className="flex flex-wrap gap-1 mb-4">
+              {selectedPub.tags.map((tag, tagIndex) => (
+                <span key={tagIndex} className="px-2 py-1 bg-cyan-500 text-black text-xs rounded-full font-poppins">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <div className="flex gap-3">
+              <a
+                href={selectedPub.doi}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 px-4 py-2 bg-cyan-500 text-black font-semibold rounded-full hover:bg-cyan-600 transition-all duration-300 text-center font-poppins"
+              >
+                View Publication
+              </a>
+              <button
+                onClick={() => setSelectedPub(null)}
+                className="px-4 py-2 bg-gray-700 text-gray-300 font-semibold rounded-full hover:bg-gray-600 transition-all duration-300 font-poppins"
+              >
+                Close
+              </button>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </motion.section>
+  );
+};
+
 // Hero Component
 const Hero = () => {
   const { scrollYProgress } = useScroll();
@@ -823,6 +956,7 @@ const Navigation = () => {
             <li><a href="#projects" className="text-gray-300 hover:text-cyan-400 transition-colors font-poppins">Projects</a></li>
             <li><a href="#experience" className="text-gray-300 hover:text-cyan-400 transition-colors font-poppins">Experience</a></li>
             <li><a href="#certifications" className="text-gray-300 hover:text-cyan-400 transition-colors font-poppins">Certifications</a></li>
+            <li><a href="#publications" className="text-gray-300 hover:text-cyan-400 transition-colors font-poppins">Publications</a></li>
             <li><a href="#contact" className="text-gray-300 hover:text-cyan-400 transition-colors font-poppins">Contact</a></li>
           </ul>
           <button
@@ -859,6 +993,7 @@ const Navigation = () => {
               <li><a href="#projects" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Projects</a></li>
               <li><a href="#experience" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Experience</a></li>
               <li><a href="#certifications" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Certifications</a></li>
+              <li><a href="#publications" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Publications</a></li>
               <li><a href="#contact" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Contact</a></li>
             </ul>
           </motion.div>
@@ -879,6 +1014,7 @@ export default function Portfolio() {
       <Projects />
       <Experience />
       <Certifications />
+      <Publications />
       <Contact />
       <footer
         className="py-8 bg-black text-center text-gray-500 border-t border-gray-700 font-space-grotesk"
