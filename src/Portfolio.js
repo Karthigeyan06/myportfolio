@@ -198,6 +198,18 @@ const Publications = () => {
       description: 'Presents a Raspberry Pi-based system for 2D-to-3D object reconstruction using computer vision techniques, enabling G-code generation for 3D printing applications.',
       tags: ['3D Reconstruction', 'Computer Vision', 'Raspberry Pi', 'OpenCV'],
       featured: true
+    },
+
+    {
+      title: 'Automatic Identification of Damage Regions in Solar Panels Using Image Processing Techniques',
+      authors: 'Karthigeyan Ganesan',
+      venue: 'Zenodo CERN',
+      year: '2025',
+      type: 'Technical Report',
+      doi: 'https://zenodo.org/records/18092348',
+      description: 'Proposes an image processing-based method for automatic detection and identification of damage regions in solar panels, enhancing maintenance efficiency.',
+      tags: ['Solar Panel Inspection', 'Image Processing', 'Computer Vision', 'Python'],
+      featured: true
     }
   ];
 
@@ -362,7 +374,7 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-2 md:gap-4 justify-center md:justify-start hidden md:flex">
             <a
-              href="https://drive.google.com/file/d/1BQfdOsaT9mH6RY5h_pvRsciqSBhTjBFl/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Yab45shzRGQ7jEHE3hk9CcgQ1btvjsv5/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-3 py-1 md:px-4 md:py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl font-space-grotesk text-sm min-h-[36px] flex items-center justify-center"
