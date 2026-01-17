@@ -411,7 +411,7 @@ const Hero = () => {
           </div>
           <div className="md:hidden flex flex-row gap-2 justify-center mt-4">
             <a
-              href="https://drive.google.com/file/d/1BQfdOsaT9mH6RY5h_pvRsciqSBhTjBFl/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Yab45shzRGQ7jEHE3hk9CcgQ1btvjsv5/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl font-space-grotesk text-sm flex items-center justify-center"
