@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ArrowUpRight, Mail, Linkedin, Github, Phone, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 //import profile from './assets/images/profilev2.jpeg';
-import profile from './assets/images/karthigpic_new.png';
+import profile from './assets/images/karthigpic_new.webp';
 import project1Image from './assets/images/project1.jpg';
 import project2Image from './assets/images/project2.jpg';
 import project3Image from './assets/images/project3.png';
