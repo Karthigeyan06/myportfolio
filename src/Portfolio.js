@@ -105,11 +105,11 @@ const Certifications = () => {
               whileHover={{ y: -2 }}
             >
               <h3 className="text-base font-semibold text-cyan-400 mb-2 font-space-grotesk">{cert.title}</h3>
-              <p className="text-gray-300 mb-1 font-poppins text-sm">{cert.platform} | {cert.issuer}</p>
-              <p className="text-gray-400 mb-3 font-poppins text-sm">{cert.year}</p>
+              <p className="text-gray-300 mb-1 font-khand font-bold text-sm">{cert.platform} | {cert.issuer}</p>
+              <p className="text-gray-400 mb-3 font-khand font-bold text-sm">{cert.year}</p>
               <button
                 onClick={() => setSelectedCert(cert)}
-                className="inline-flex items-center gap-1 px-3 py-1 bg-cyan-500 text-black font-semibold rounded-full hover:bg-cyan-600 transition-all duration-300 font-poppins text-sm min-h-[36px]"
+                className="inline-flex items-center gap-1 px-3 py-1 bg-cyan-500 text-black font-semibold rounded-full hover:bg-cyan-600 transition-all duration-300 font-khand font-bold text-sm min-h-[36px]"
               >
                 View Certificate <ArrowUpRight className="w-3 h-3" />
               </button>
@@ -120,7 +120,7 @@ const Certifications = () => {
           <div className="text-center mt-8">
             <a
   href="https://karthigeyan06.github.io/myportfolio/certificates.html"
-  className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl font-poppins"
+  className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl font-khand font-bold"
 >
   View All Certifications <ArrowUpRight className="w-4 h-4 ml-2" />
 </a>
@@ -145,21 +145,21 @@ const Certifications = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <h3 className="text-xl font-semibold text-cyan-400 mb-2 font-space-grotesk">{selectedCert.title}</h3>
-            <p className="text-gray-300 mb-1 font-poppins">{selectedCert.platform} | {selectedCert.issuer}</p>
-            <p className="text-gray-400 mb-3 font-poppins">{selectedCert.year}</p>
-            <p className="text-gray-300 mb-4 font-poppins">{selectedCert.description}</p>
+            <p className="text-gray-300 mb-1 font-khand font-bold">{selectedCert.platform} | {selectedCert.issuer}</p>
+            <p className="text-gray-400 mb-3 font-khand font-bold">{selectedCert.year}</p>
+            <p className="text-gray-300 mb-4 font-khand font-bold">{selectedCert.description}</p>
             <div className="flex gap-3">
               <a
                 href={selectedCert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 px-4 py-2 bg-cyan-500 text-black font-semibold rounded-full hover:bg-cyan-600 transition-all duration-300 text-center font-poppins"
+                className="flex-1 px-4 py-2 bg-cyan-500 text-black font-semibold rounded-full hover:bg-cyan-600 transition-all duration-300 text-center font-khand font-bold"
               >
                 View Certificate
               </a>
               <button
                 onClick={() => setSelectedCert(null)}
-                className="px-4 py-2 bg-gray-700 text-gray-300 font-semibold rounded-full hover:bg-gray-600 transition-all duration-300 font-poppins"
+                className="px-4 py-2 bg-gray-700 text-gray-300 font-semibold rounded-full hover:bg-gray-600 transition-all duration-300 font-khand font-bold"
               >
                 Close
               </button>
@@ -242,12 +242,12 @@ const Publications = () => {
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold text-cyan-400 mb-2 font-space-grotesk">{pub.title}</h3>
-                  <p className="text-gray-300 mb-1 font-poppins text-sm">{pub.authors}</p>
-                  <p className="text-gray-400 mb-2 font-poppins text-sm">{pub.venue} • {pub.year} • {pub.type}</p>
-                  <p className="text-gray-300 mb-3 font-poppins text-sm">{pub.description}</p>
+                  <p className="text-gray-300 mb-1 font-khand font-bold text-sm">{pub.authors}</p>
+                  <p className="text-gray-400 mb-2 font-khand font-bold text-sm">{pub.venue} • {pub.year} • {pub.type}</p>
+                  <p className="text-gray-300 mb-3 font-khand font-bold text-sm">{pub.description}</p>
                   <div className="flex flex-wrap gap-1 mb-3">
                     {pub.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="px-2 py-1 bg-cyan-500 text-black text-xs rounded-full font-poppins">
+                      <span key={tagIndex} className="px-2 py-1 bg-cyan-500 text-black text-xs rounded-full font-khand font-bold">
                         {tag}
                       </span>
                     ))}
@@ -255,7 +255,7 @@ const Publications = () => {
                 </div>
                 <button
                   onClick={() => setSelectedPub(pub)}
-                  className="inline-flex items-center gap-1 px-3 py-1 bg-purple-500 text-white font-semibold rounded-full hover:bg-purple-600 transition-all duration-300 font-poppins text-sm min-h-[36px] mt-2 md:mt-0"
+                  className="inline-flex items-center gap-1 px-3 py-1 bg-purple-500 text-white font-semibold rounded-full hover:bg-purple-600 transition-all duration-300 font-khand font-bold text-sm min-h-[36px] mt-2 md:mt-0"
                 >
                   View Details <ArrowUpRight className="w-3 h-3" />
                 </button>
@@ -282,13 +282,13 @@ const Publications = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <h3 className="text-xl font-semibold text-cyan-400 mb-2 font-space-grotesk">{selectedPub.title}</h3>
-            <p className="text-gray-300 mb-1 font-poppins">{selectedPub.authors}</p>
-            <p className="text-gray-400 mb-1 font-poppins">{selectedPub.venue} • {selectedPub.year}</p>
-            <p className="text-gray-400 mb-3 font-poppins">{selectedPub.type}</p>
-            <p className="text-gray-300 mb-4 font-poppins">{selectedPub.description}</p>
+            <p className="text-gray-300 mb-1 font-khand font-bold">{selectedPub.authors}</p>
+            <p className="text-gray-400 mb-1 font-khand font-bold">{selectedPub.venue} • {selectedPub.year}</p>
+            <p className="text-gray-400 mb-3 font-khand font-bold">{selectedPub.type}</p>
+            <p className="text-gray-300 mb-4 font-khand font-bold">{selectedPub.description}</p>
             <div className="flex flex-wrap gap-1 mb-4">
               {selectedPub.tags.map((tag, tagIndex) => (
-                <span key={tagIndex} className="px-2 py-1 bg-cyan-500 text-black text-xs rounded-full font-poppins">
+                <span key={tagIndex} className="px-2 py-1 bg-cyan-500 text-black text-xs rounded-full font-khand font-bold">
                   {tag}
                 </span>
               ))}
@@ -298,13 +298,13 @@ const Publications = () => {
                 href={selectedPub.doi}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 px-4 py-2 bg-cyan-500 text-black font-semibold rounded-full hover:bg-cyan-600 transition-all duration-300 text-center font-poppins"
+                className="flex-1 px-4 py-2 bg-cyan-500 text-black font-semibold rounded-full hover:bg-cyan-600 transition-all duration-300 text-center font-khand font-bold"
               >
                 View Publication
               </a>
               <button
                 onClick={() => setSelectedPub(null)}
-                className="px-4 py-2 bg-gray-700 text-gray-300 font-semibold rounded-full hover:bg-gray-600 transition-all duration-300 font-poppins"
+                className="px-4 py-2 bg-gray-700 text-gray-300 font-semibold rounded-full hover:bg-gray-600 transition-all duration-300 font-khand font-bold"
               >
                 Close
               </button>
@@ -360,17 +360,17 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="text-center md:text-left order-1 md:order-1"
         >
-          <h1 className="text-2xl md:text-3xl lg:text-5xl font-semibold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 leading-none font-space-grotesk tracking-tight max-w-none">
+          <h1 className="text-2xl md:text-3xl lg:text-5xl font-semibold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 leading-none font-khand tracking-tight max-w-none">
             Karthigeyan Ganesan
           </h1>
           <div className="w-8 h-1 bg-cyan-400 mx-auto md:mx-0 mb-4 hidden md:block"></div>
-          <p className="text-sm md:text-xl lg:text-2xl text-gray-300 mb-4 font-semibold font-space-grotesk hidden md:block">
+          <p className="text-sm md:text-xl lg:text-2xl text-gray-300 mb-4 font-semibold font-khand hidden md:block">
             Embedded Systems & IoT Engineer
           </p>
-          <p className="text-xs md:text-base text-gray-300 mb-2 font-semibold font-space-grotesk hidden md:block">
+          <p className="text-xs md:text-base text-gray-300 mb-2 font-semibold font-khand hidden md:block">
             Project Intern at embedUR systems
           </p>
-          <p className="text-xs md:text-base text-gray-400 mb-4 md:mb-8 max-w-lg mx-auto md:mx-0 font-space-grotesk leading-relaxed hidden md:block">
+          <p className="text-xs md:text-base text-gray-400 mb-4 md:mb-8 max-w-lg mx-auto md:mx-0 font-khand leading-relaxed hidden md:block">
             Crafting intelligent embedded solutions with cutting-edge technologies in Linux, IoT, and robotics.
           </p>
           <div className="flex flex-col sm:flex-row gap-2 md:gap-4 justify-center md:justify-start hidden md:flex">
@@ -378,26 +378,26 @@ const Hero = () => {
               href="https://drive.google.com/file/d/1Yab45shzRGQ7jEHE3hk9CcgQ1btvjsv5/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-1 md:px-4 md:py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl font-space-grotesk text-sm min-h-[36px] flex items-center justify-center"
+              className="px-3 py-1 md:px-4 md:py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-khand font-semibold font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl font-khand text-sm min-h-[36px] flex items-center justify-center"
             >
               View Resume
             </a>
             <a
               href="#projects"
-              className="px-3 py-1 md:px-4 md:py-2 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300 font-space-grotesk text-sm min-h-[36px] flex items-center justify-center"
+              className="px-3 py-1 md:px-4 md:py-2 border-2 border-cyan-400 text-cyan-400 font-khand font-semibold rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300 font-khand text-sm min-h-[36px] flex items-center justify-center"
             >
               View Projects
             </a>
           </div>
           <div className="md:hidden flex justify-between items-center mt-4">
             <div className="text-left">
-              <p className="text-sm text-gray-300 mb-2 font-semibold font-space-grotesk">
+              <p className="text-sm text-gray-300 mb-2 font-semibold font-khand">
                 Embedded Systems & IoT Engineer
               </p>
-              <p className="text-xs text-gray-300 mb-2 font-semibold font-space-grotesk">
+              <p className="text-xs text-gray-300 mb-2 font-semibold font-khand">
                 Project Intern at embedUR systems
               </p>
-              <p className="text-xs text-gray-400 max-w-xs font-space-grotesk leading-relaxed">
+              <p className="text-xs text-gray-400 max-w-xs font-khand font-semibold leading-relaxed">
                 Crafting intelligent embedded solutions with cutting-edge technologies in Linux, IoT, and robotics.
               </p>
             </div>
@@ -415,13 +415,13 @@ const Hero = () => {
               href="https://drive.google.com/file/d/1Yab45shzRGQ7jEHE3hk9CcgQ1btvjsv5/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl font-space-grotesk text-sm flex items-center justify-center"
+              className="px-4 py-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl font-khand text-sm flex items-center justify-center"
             >
               View Resume
             </a>
             <a
               href="#projects"
-              className="px-4 py-1 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300 font-space-grotesk text-sm flex items-center justify-center"
+              className="px-4 py-1 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300 font-khand text-sm flex items-center justify-center"
             >
               View Projects
             </a>
@@ -455,28 +455,28 @@ const About = () => {
         >
           About Me
         </motion.h2>
-        <p className="text-base text-gray-300 mb-6 leading-relaxed font-poppins">
+        <p className="text-base text-gray-300 mb-6 leading-relaxed font-khand font-bold">
           As an Embedded Systems & IoT Engineer, I specialize in developing robust, scalable solutions for industrial and consumer applications. With expertise in microcontrollers, Linux systems, and computer vision, I bridge the gap between hardware and software to create innovative products.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <div className="bg-gray-800/50 p-4 rounded-xl shadow-lg border border-gray-700">
             <h3 className="text-lg font-semibold text-cyan-400 mb-2 font-space-grotesk">Expertise</h3>
-            <p className="text-gray-400 font-poppins">Embedded C, Python, OpenCV, Robotics, IoT systems</p>
+            <p className="text-gray-400 font-khand font-bold">Embedded C, Python, OpenCV, Robotics, IoT systems</p>
           </div>
           <div className="bg-gray-800/50 p-4 rounded-xl shadow-lg border border-gray-700">
             <h3 className="text-lg font-semibold text-cyan-400 mb-2 font-space-grotesk">Passion</h3>
-            <p className="text-gray-400 font-poppins">Building intelligent IoT ecosystems</p>
+            <p className="text-gray-400 font-khand font-bold">Building intelligent IoT ecosystems</p>
           </div>
           <div className="bg-gray-800/50 p-4 rounded-xl shadow-lg border border-gray-700">
             <h3 className="text-lg font-semibold text-cyan-400 mb-2 font-space-grotesk">Acedemic Note</h3>
-            <p className="text-gray-400 font-poppins">15+ projects, 3 internships, 8.8 CGPA</p>
+            <p className="text-gray-400 font-khand font-bold">15+ projects, 3 internships, 8.8 CGPA</p>
           </div>
         </div>
         <div className="flex justify-center">
           <div className="bg-gray-800/50 p-4 rounded-xl shadow-lg border border-gray-700 w-full md:w-2/3">
             <h3 className="text-lg font-semibold text-cyan-400 mb-2 font-space-grotesk">Education</h3>
-            <p className="text-gray-400 font-poppins font-semibold">B.E. Electronics and Communication Engineering 2022-2026</p>
-            <p className="text-gray-400 font-poppins">Rajalakshmi Institute of Technology, Chennai</p>
+            <p className="text-gray-400 font-khand font-bold">B.E. Electronics and Communication Engineering 2022-2026</p>
+            <p className="text-gray-400 font-khand font-bold">Rajalakshmi Institute of Technology, Chennai</p>
           </div>
         </div>
       </div>
@@ -521,7 +521,7 @@ const Skills = () => {
                 {skills.map((skill, index) => (
                   <motion.span
                     key={index}
-                    className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-600 hover:bg-cyan-500 hover:text-black transition-all duration-300 cursor-pointer font-poppins"
+                    className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm border border-gray-600 hover:bg-cyan-500 hover:text-black transition-all duration-300 cursor-pointer font-khand font-bold"
                     whileHover={{ scale: 1.02 }}
                   >
                     {skill}
@@ -752,10 +752,10 @@ const Projects = () => {
               </div>
               <div className="p-2 md:p-3">
                 <h3 className="text-base font-semibold text-cyan-400 mb-2 font-space-grotesk">{project.title}</h3>
-                <p className="text-gray-400 mb-2 font-poppins line-clamp-2 text-sm">{project.description}</p>
+                <p className="text-gray-400 mb-2 font-khand font-bold line-clamp-2 text-sm">{project.description}</p>
                 <div className="flex flex-wrap gap-1 mb-2">
                   {project.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="px-2 py-1 bg-gray-700 text-xs text-gray-300 rounded-full font-poppins">
+                    <span key={tagIndex} className="px-2 py-1 bg-gray-700 text-xs text-gray-300 rounded-full font-khand font-bold">
                       {tag}
                     </span>
                   ))}
@@ -764,7 +764,7 @@ const Projects = () => {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 px-3 py-1 bg-cyan-500 text-black font-semibold rounded-full hover:bg-cyan-600 transition-all duration-300 font-poppins text-sm min-h-[36px]"
+                  className="inline-flex items-center gap-1 px-3 py-1 bg-cyan-500 text-black font-semibold rounded-full hover:bg-cyan-600 transition-all duration-300 font-khand font-bold text-sm min-h-[36px]"
                 >
                   View Project <ArrowUpRight className="w-3 h-3" />
                 </a>
@@ -776,7 +776,7 @@ const Projects = () => {
           <div className="text-center mt-8">
             <a
   href="https://karthigeyan06.github.io/myportfolio/projects.html"
-  className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl font-poppins"
+  className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl font-khand font-bold"
 >
   View All Projects <ArrowUpRight className="w-4 h-4 ml-2" />
 </a>
@@ -787,7 +787,7 @@ const Projects = () => {
           <div className="text-center mt-8">
             <button
               onClick={() => setShowAll(false)}
-              className="px-6 py-2 bg-gray-700 text-gray-300 font-semibold rounded-full hover:bg-gray-600 transition-all duration-300 font-poppins"
+              className="px-6 py-2 bg-gray-700 text-gray-300 font-semibold rounded-full hover:bg-gray-600 transition-all duration-300 font-khand font-bold"
             >
               Show Featured Only <ChevronUp className="w-4 h-4 ml-2" />
             </button>
@@ -861,17 +861,17 @@ const Experience = () => {
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                 <h3 className="text-xl font-semibold text-cyan-400 font-space-grotesk">{exp.company}</h3>
-                <span className="text-gray-400 font-poppins">{exp.duration}</span>
+                <span className="text-gray-400 font-khand font-bold">{exp.duration}</span>
               </div>
-              <p className="text-base text-gray-300 mb-3 font-poppins">{exp.role}</p>
-              <ul className="text-gray-400 mb-4 list-disc list-inside font-poppins">
+              <p className="text-base text-gray-300 mb-3 font-khand font-bold">{exp.role}</p>
+              <ul className="text-gray-400 mb-4 list-disc list-inside font-khand font-bold">
                 {exp.achievements.map((ach, achIndex) => (
                   <li key={achIndex}>{ach}</li>
                 ))}
               </ul>
               <div className="flex flex-wrap gap-1">
                 {exp.tech.map((tech, techIndex) => (
-                  <span key={techIndex} className="px-2 py-1 bg-cyan-500 text-black text-sm rounded-full font-poppins">
+                  <span key={techIndex} className="px-2 py-1 bg-cyan-500 text-black text-sm rounded-full font-khand font-bold">
                     {tech}
                   </span>
                 ))}
@@ -907,7 +907,7 @@ const Contact = () => {
         >
           Contact
         </motion.h2>
-        <p className="text-base text-gray-300 mb-8 font-poppins">
+        <p className="text-base text-gray-300 mb-8 font-khand font-bold">
           Ready to collaborate on innovative embedded solutions? Let's connect.
         </p>
         <div className="flex justify-center space-x-6 mb-8">
@@ -934,7 +934,7 @@ const Contact = () => {
         </div>
         <a
           href="mailto:karthigeyanganesan06@gmail.com"
-          className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl font-poppins"
+          className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl font-khand font-bold"
         >
           Let's Connect
         </a>
@@ -964,13 +964,13 @@ const Navigation = () => {
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold text-cyan-400 font-space-grotesk">KG</h1>
           <ul className="hidden md:flex space-x-8">
-            <li><a href="#about" className="text-gray-300 hover:text-cyan-400 transition-colors font-poppins">About</a></li>
-            <li><a href="#skills" className="text-gray-300 hover:text-cyan-400 transition-colors font-poppins">Skills</a></li>
-            <li><a href="#projects" className="text-gray-300 hover:text-cyan-400 transition-colors font-poppins">Projects</a></li>
-            <li><a href="#experience" className="text-gray-300 hover:text-cyan-400 transition-colors font-poppins">Experience</a></li>
-            <li><a href="#certifications" className="text-gray-300 hover:text-cyan-400 transition-colors font-poppins">Certifications</a></li>
-            <li><a href="#publications" className="text-gray-300 hover:text-cyan-400 transition-colors font-poppins">Publications</a></li>
-            <li><a href="#contact" className="text-gray-300 hover:text-cyan-400 transition-colors font-poppins">Contact</a></li>
+            <li><a href="#about" className="text-gray-300 hover:text-cyan-400 transition-colors font-khand font-bold">About</a></li>
+            <li><a href="#skills" className="text-gray-300 hover:text-cyan-400 transition-colors font-khand font-bold">Skills</a></li>
+            <li><a href="#projects" className="text-gray-300 hover:text-cyan-400 transition-colors font-khand font-bold">Projects</a></li>
+            <li><a href="#experience" className="text-gray-300 hover:text-cyan-400 transition-colors font-khand font-bold">Experience</a></li>
+            <li><a href="#certifications" className="text-gray-300 hover:text-cyan-400 transition-colors font-khand font-bold">Certifications</a></li>
+            <li><a href="#publications" className="text-gray-300 hover:text-cyan-400 transition-colors font-khand font-bold">Publications</a></li>
+            <li><a href="#contact" className="text-gray-300 hover:text-cyan-400 transition-colors font-khand font-bold">Contact</a></li>
           </ul>
           <button
             onClick={toggleMobileMenu}
@@ -1001,13 +1001,13 @@ const Navigation = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <ul className="py-2 px-4 space-y-1">
-              <li><a href="#about" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">About</a></li>
-              <li><a href="#skills" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Skills</a></li>
-              <li><a href="#projects" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Projects</a></li>
-              <li><a href="#experience" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Experience</a></li>
-              <li><a href="#certifications" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Certifications</a></li>
-              <li><a href="#publications" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Publications</a></li>
-              <li><a href="#contact" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-poppins py-3 px-2">Contact</a></li>
+              <li><a href="#about" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-khand font-bold py-3 px-2">About</a></li>
+              <li><a href="#skills" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-khand font-bold py-3 px-2">Skills</a></li>
+              <li><a href="#projects" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-khand font-bold py-3 px-2">Projects</a></li>
+              <li><a href="#experience" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-khand font-bold py-3 px-2">Experience</a></li>
+              <li><a href="#certifications" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-khand font-bold py-3 px-2">Certifications</a></li>
+              <li><a href="#publications" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-khand font-bold py-3 px-2">Publications</a></li>
+              <li><a href="#contact" onClick={closeMobileMenu} className="block text-gray-300 hover:text-cyan-400 transition-colors font-khand font-bold py-3 px-2">Contact</a></li>
             </ul>
           </motion.div>
         </motion.div>
