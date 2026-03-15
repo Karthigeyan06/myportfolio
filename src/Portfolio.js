@@ -848,12 +848,12 @@ const Hero = () => {
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.25 }}
               style={{ fontSize: 'clamp(0.85rem, 3vw, 1.3rem)', marginBottom: 14, fontWeight: 300 }}>
-              <TypingText texts={['Embedded Systems Engineer', 'IoT Architect', 'Linux Developer', 'Robotics Builder']} />
+              <TypingText texts={['Embedded Systems Engineer', 'IoT Engineer', 'Software Development Engineer', 'Robotics Enthusiastic']} />
             </motion.div>
 
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.4 }}
               style={{ color: 'var(--muted)', maxWidth: 520, lineHeight: 1.7, marginBottom: 24, fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)' }}>
-              Crafting intelligent embedded solutions at the intersection of hardware and software — Linux, IoT, computer vision, and robotics.
+              Crafting intelligent embedded solutions at the intersection of hardware and software - Linux, IoT, computer vision, and robotics.
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
@@ -902,8 +902,8 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   const cards = [
-    { icon: <Code2 size={18} />, title: 'Expertise', body: 'Embedded C, Python, OpenCV, Robotics, IoT systems & Linux development' },
-    { icon: <Zap size={18} />, title: 'Passion', body: 'Building intelligent IoT ecosystems that bridge hardware and software' },
+    { icon: <Code2 size={18} />, title: 'Expertise', body: 'Embedded C, Firmware Development, Kernel Debugging, OpenCV, Robotics, IoT systems, Computer Networks, Linux development' },
+    { icon: <Zap size={18} />, title: 'Passion', body: 'Building intelligent IoT ecosystems that bridge hardware and software pacing towards Automation' },
     { icon: <Cpu size={18} />, title: 'Education', body: 'B.E. ECE 2022–2026 · Rajalakshmi Institute of Technology, Chennai' },
   ];
 
@@ -954,8 +954,8 @@ const Skills = () => {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   const skillGroups = [
-    { label: 'Core / Primary', color: 'var(--acid)', skills: ['Embedded C', 'Python', 'Linux', 'STM32', 'ESP32', 'Raspberry Pi', 'OpenCV', 'IoT', 'Robotics', 'Computer Vision'] },
-    { label: 'Secondary', color: 'var(--plasma)', skills: ['Arduino', 'PLCs (Siemens, Mitsubishi)', 'MATLAB', 'Verilog', 'SQL', 'Git'] },
+    { label: 'Core / Primary', color: 'var(--acid)', skills: ['Embedded C', 'Firware Development', 'Networking Protocols', 'Debugging', 'Linux & Linux Kernels', 'STM32','OS Development', 'Raspberry Pi', 'OpenCV', 'IoT', 'Robotics', 'Computer Vision'] },
+    { label: 'Secondary', color: 'var(--plasma)', skills: ['Arduino', 'PLCs (Siemens, Mitsubishi)', 'MATLAB', 'Verilog', 'SQL', 'Python', 'Git', 'Filesystems'] },
     { label: 'Tools & IDEs', color: 'var(--volt)', skills: ['STM32CubeIDE', 'Arduino IDE', 'KiCad', 'Quartus', 'Multisim', 'Fusion 360', 'Wireshark', 'Keil UVision', 'MATLAB Simulink'] },
   ];
 
