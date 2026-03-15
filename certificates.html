@@ -3,117 +3,326 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Certifications - Karthigeyan Ganesan | Professional Credentials</title>
-  <meta name="description" content="Professional certifications in embedded systems, IoT, and software development by Karthigeyan Ganesan. Coursera, EdX, and NPTEL credentials.">
-  <meta name="keywords" content="Certifications, Embedded Systems, IoT, Linux, Coursera, EdX, NPTEL, Computer Science, Professional Development">
-  <meta name="author" content="Karthigeyan Ganesan">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#000000">
-  
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://karthigeyan06.github.io/myportfolio/certificates.html">
-  <meta property="og:title" content="Certifications - Karthigeyan Ganesan | Professional Credentials">
-  <meta property="og:description" content="Professional certifications in embedded systems, IoT, and software development.">
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Certifications - Karthigeyan Ganesan">
-  <meta name="twitter:description" content="Professional credentials in embedded systems and software development.">
-  
-  <!-- Canonical -->
-  <link rel="canonical" href="https://karthigeyan06.github.io/myportfolio/certificates.html">
-  
+  <title>Certifications — Karthigeyan Ganesan</title>
+  <meta name="description" content="Professional certifications in embedded systems, IoT, and software development by Karthigeyan Ganesan.">
   <link rel="icon" href="https://avatars.githubusercontent.com/u/121625476?v=4" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Oxanium:wght@300;400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── Cert-page extras ── */
+    .cert-card {
+      padding: 22px 24px;
+    }
+
+    .cert-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      color: var(--plasma);
+      letter-spacing: 0.12em;
+      opacity: 0.6;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    /* Platform color dots */
+    .platform-dot {
+      display: inline-block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    .platform-coursera .platform-dot { background: #0056D2; box-shadow: 0 0 6px #0056D2; }
+    .platform-edx      .platform-dot { background: #FF0000; box-shadow: 0 0 6px #FF0000; }
+    .platform-nptel    .platform-dot { background: var(--volt); box-shadow: 0 0 6px var(--volt); }
+
+    /* Stats row */
+    .cert-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+
+    .cert-stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 16px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+
+    .cert-stat::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--acid), transparent);
+      opacity: 0.4;
+    }
+
+    .cert-stat:hover { border-color: rgba(0,255,224,0.25); }
+
+    .cert-stat-val {
+      font-family: 'Oxanium', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--acid);
+      line-height: 1;
+      text-shadow: 0 0 16px rgba(0,255,224,0.4);
+    }
+
+    .cert-stat-lbl {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    @media (max-width: 480px) {
+      .cert-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
-<body class="certificates-page">
-  <nav class="navbar">
-    <div class="container">
-      <a href="https://karthigeyan06.github.io/myportfolio/" class="logo">KG</a>
-      <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="https://karthigeyan06.github.io/myportfolio/">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="certificates.html" class="active">Certifications</a></li>
-      </ul>
-    </div>
+<body>
+
+  <!-- Particles canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ── Navigation ── -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="logo">KG<sup>v2.6</sup></a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certificates.html" class="active">Certifications</a></li>
+    </ul>
+
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
   </nav>
 
-  <section class="hero">
-    <h1>Certifications</h1>
-    <p>Professional credentials in embedded systems and software development</p>
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="index.html"><span class="nav-idx">01</span>Home</a>
+    <a href="projects.html"><span class="nav-idx">02</span>Projects</a>
+    <a href="certificates.html" class="active"><span class="nav-idx">03</span>Certifications</a>
+  </div>
+
+  <!-- ── Hero ── -->
+  <section class="hero circuit-bg">
+    <span class="hero-label">// section.certifications</span>
+    <h1><span>Certifications</span></h1>
+    <p>Professional credentials in embedded systems, networking, and hardware design</p>
+    <div class="hero-divider"></div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="grid grid-2">
-        <div class="cert-card">
-          <h3>Embedded Software and Hardware Architecture</h3>
-          <p class="issuer">Coursera | University of Colorado Boulder</p>
-          <a href="https://drive.google.com/file/d/1Vv7kVm1sukB6hD3S-OI2CbaN4h73IIBA/view" class="button">View Certificate</a>
+  <!-- ── Stats ── -->
+  <section class="section" style="padding-bottom: 0;">
+    <div class="section-container">
+      <div class="cert-stats stagger-1">
+        <div class="cert-stat">
+          <div class="cert-stat-val">4</div>
+          <div class="cert-stat-lbl">Certifications</div>
         </div>
-        <div class="cert-card">
-          <h3>Linux Embedded System Topics and Projects</h3>
-          <p class="issuer">Coursera | University of Colorado Boulder</p>
-          <a href="https://www.coursera.org/account/accomplishments/verify/IFQCV39AJN3U" class="button">View Certificate</a>
+        <div class="cert-stat">
+          <div class="cert-stat-val">3</div>
+          <div class="cert-stat-lbl">Platforms</div>
         </div>
-        <div class="cert-card">
-          <h3>Networking and Storage Essentials</h3>
-          <p class="issuer">EdX | IBM</p>
-          <a href="https://courses.edx.org/certificates/30d659616d25482587ba61e388391600" class="button">View Certificate</a>
+        <div class="cert-stat">
+          <div class="cert-stat-val">2025</div>
+          <div class="cert-stat-lbl">Latest Year</div>
         </div>
-        <div class="cert-card">
-          <h3>System Design Through Verilog</h3>
-          <p class="issuer">NPTEL | IIT Guwahati</p>
-          <a href="https://drive.google.com/file/d/1OKvodhnFReieT9CZurJFrf5dyIrjNDGO/view" class="button">View Certificate</a>
-        </div>
-
-        <div class="cert-card">
-          <h3>CS50 Introduction to Programming with Python</h3>
-          <p class="issuer">HarvardX</p>
-          <a href="https://certificates.cs50.io/769737e3-5bf5-4e8a-b919-a5663fa51880.pdf?size=letter" class="button">View Certificate</a>
-        </div>
-
-        <div class="cert-card">
-          <h3>Problem Solving Through C Programming</h3>
-          <p class="issuer">NPTEL | IIT Kharagpur</p>
-          <a href="https://drive.google.com/file/d/1LvHqqHgKulsOgH32NA6IDbcEHt893g27/view?usp=drivesdk" class="button">View Certificate</a>
-        </div>
-
-        <div class="cert-card">
-          <h3>Embedded Systems using C</h3>
-          <p class="issuer">Coursera | EDUCBA</p>
-          <a href="https://www.coursera.org/account/accomplishments/records/6NE9J07PFG8O" class="button">View Certificate</a>
-        </div>
-
-        <div class="cert-card">
-          <h3>Essentials of Entrepreneurship: Thinking & Action</h3>
-          <p class="issuer">Coursera | University of California</p>
-          <a href="https://www.coursera.org/account/accomplishments/verify/HT9ZL5E53T1B" class="button">View Certificate</a>
-        </div>
-
       </div>
     </div>
   </section>
 
+  <!-- ── Certs Grid ── -->
+  <section class="section">
+    <div class="section-container">
+
+      <div class="certs-grid">
+
+        <!-- Cert 1 -->
+        <div class="eng-card cert-card stagger-2 reveal">
+          <span class="cert-number">CERT-001</span>
+          <div class="cert-meta">
+            <span class="cert-platform platform-coursera mono">
+              <span class="platform-dot"></span>Coursera
+            </span>
+            <span class="cert-year">2025</span>
+          </div>
+          <h3>Embedded Software and Hardware Architecture</h3>
+          <div class="cert-issuer">University of Colorado Boulder</div>
+          <a href="https://drive.google.com/file/d/1Vv7kVm1sukB6hD3S-OI2CbaN4h73IIBA/view"
+             target="_blank" class="btn-primary">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            View Certificate
+          </a>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="eng-card cert-card stagger-3 reveal">
+          <span class="cert-number">CERT-002</span>
+          <div class="cert-meta">
+            <span class="cert-platform platform-coursera mono">
+              <span class="platform-dot"></span>Coursera
+            </span>
+            <span class="cert-year">2025</span>
+          </div>
+          <h3>Linux Embedded System Topics and Projects</h3>
+          <div class="cert-issuer">University of Colorado Boulder</div>
+          <a href="https://www.coursera.org/account/accomplishments/verify/IFQCV39AJN3U"
+             target="_blank" class="btn-primary">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            View Certificate
+          </a>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="eng-card cert-card stagger-4 reveal">
+          <span class="cert-number">CERT-003</span>
+          <div class="cert-meta">
+            <span class="cert-platform platform-edx mono">
+              <span class="platform-dot"></span>EdX
+            </span>
+            <span class="cert-year">2025</span>
+          </div>
+          <h3>Networking and Storage Essentials</h3>
+          <div class="cert-issuer">IBM</div>
+          <a href="https://courses.edx.org/certificates/30d659616d25482587ba61e388391600"
+             target="_blank" class="btn-primary">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            View Certificate
+          </a>
+        </div>
+
+        <!-- Cert 4 -->
+        <div class="eng-card cert-card stagger-5 reveal">
+          <span class="cert-number">CERT-004</span>
+          <div class="cert-meta">
+            <span class="cert-platform platform-nptel mono">
+              <span class="platform-dot"></span>NPTEL
+            </span>
+            <span class="cert-year">2024</span>
+          </div>
+          <h3>System Design Through Verilog</h3>
+          <div class="cert-issuer">IIT Guwahati</div>
+          <a href="https://drive.google.com/file/d/1OKvodhnFReieT9CZurJFrf5dyIrjNDGO/view"
+             target="_blank" class="btn-primary">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            View Certificate
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Back to portfolio -->
+      <div style="text-align:center; margin-top:40px;">
+        <a href="index.html" class="btn-back">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+          Back to Portfolio
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <span>© 2026 KARTHIGEYAN GANESAN · EMBEDDED SYSTEMS ENGINEER<span class="dot">·</span>BUILT WITH PRECISION</span>
+  </footer>
+
   <script>
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const navLinks = document.getElementById('navLinks');
-
-    mobileMenuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('mobile');
-    });
-
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('mobile');
+    // ── Particles ──
+    (function() {
+      const canvas = document.getElementById('particles-canvas');
+      const ctx = canvas.getContext('2d');
+      let W = window.innerWidth, H = window.innerHeight;
+      canvas.width = W; canvas.height = H;
+      const dots = Array.from({ length: 50 }, () => ({
+        x: Math.random() * W, y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3,
+        r: Math.random() * 1.5 + 0.5
+      }));
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        dots.forEach(d => {
+          d.x += d.vx; d.y += d.vy;
+          if (d.x < 0 || d.x > W) d.vx *= -1;
+          if (d.y < 0 || d.y > H) d.vy *= -1;
+          ctx.beginPath();
+          ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(0,255,224,0.22)';
+          ctx.fill();
+        });
+        for (let i = 0; i < dots.length; i++)
+          for (let j = i + 1; j < dots.length; j++) {
+            const dx = dots[i].x - dots[j].x, dy = dots[i].y - dots[j].y;
+            const dist = Math.sqrt(dx*dx + dy*dy);
+            if (dist < 110) {
+              ctx.beginPath();
+              ctx.strokeStyle = `rgba(0,255,224,${0.07 * (1 - dist/110)})`;
+              ctx.lineWidth = 0.5;
+              ctx.moveTo(dots[i].x, dots[i].y);
+              ctx.lineTo(dots[j].x, dots[j].y);
+              ctx.stroke();
+            }
+          }
+        requestAnimationFrame(draw);
+      }
+      draw();
+      window.addEventListener('resize', () => {
+        W = window.innerWidth; H = window.innerHeight;
+        canvas.width = W; canvas.height = H;
       });
+    })();
+
+    // ── Mobile nav ──
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('mobile-drawer');
+    hamburger.addEventListener('click', () => {
+      const open = drawer.classList.toggle('open');
+      hamburger.textContent = open ? '✕' : '☰';
     });
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      hamburger.textContent = '☰';
+    }));
+
+    // ── Scroll reveal ──
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
