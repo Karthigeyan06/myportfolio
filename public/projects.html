@@ -3,234 +3,439 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Karthigeyan Ganesan | Embedded Systems & IoT Portfolio</title>
-  <meta name="description" content="Showcasing innovative embedded systems and IoT projects by Karthigeyan Ganesan. Portfolio includes robotics, Linux, computer vision, and hardware projects.">
-  <meta name="keywords" content="Embedded Systems Projects, IoT Projects, Robotics Projects, Computer Vision, Arduino, Raspberry Pi, Open Source, Portfolio">
-  <meta name="author" content="Karthigeyan Ganesan">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#000000">
-  
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://karthigeyan06.github.io/myportfolio/projects.html">
-  <meta property="og:title" content="Projects - Karthigeyan Ganesan | Embedded Systems & IoT Portfolio">
-  <meta property="og:description" content="Showcasing innovative embedded systems and IoT projects by Karthigeyan Ganesan.">
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Projects - Karthigeyan Ganesan">
-  <meta name="twitter:description" content="Showcasing innovative embedded systems and IoT projects.">
-  
-  <!-- Canonical -->
-  <link rel="canonical" href="https://karthigeyan06.github.io/myportfolio/projects.html">
-  
+  <title>Projects — Karthigeyan Ganesan</title>
+  <meta name="description" content="Showcasing innovative embedded systems and IoT projects by Karthigeyan Ganesan.">
   <link rel="icon" href="https://avatars.githubusercontent.com/u/121625476?v=4" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Oxanium:wght@300;400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="projects-page">
-  <nav class="navbar">
-    <div class="container">
-      <a href="https://karthigeyan06.github.io/myportfolio/" class="logo">KG</a>
-      <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="https://karthigeyan06.github.io/myportfolio/">Home</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="certificates.html">Certifications</a></li>
-      </ul>
-    </div>
+<body>
+
+  <!-- Particles canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ── Navigation ── -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="logo">KG<sup>v2.6</sup></a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="certificates.html">Certifications</a></li>
+    </ul>
+
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
   </nav>
 
-  <section class="hero">
-    <h1>Projects</h1>
-    <p>Showcasing innovative embedded systems and IoT projects</p>
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="index.html"><span class="nav-idx">01</span>Home</a>
+    <a href="projects.html" class="active"><span class="nav-idx">02</span>Projects</a>
+    <a href="certificates.html"><span class="nav-idx">03</span>Certifications</a>
+  </div>
+
+  <!-- ── Hero ── -->
+  <section class="hero circuit-bg">
+    <span class="hero-label">// section.projects</span>
+    <h1>All <span>Projects</span></h1>
+    <p>Embedded systems, IoT, robotics, computer vision &amp; software projects</p>
+    <div class="hero-divider"></div>
+    <div class="count-badge" style="justify-content:center; margin-top:16px;">
+      <span class="dot"></span>
+      <span>21 PROJECTS TOTAL</span>
+    </div>
   </section>
 
+  <!-- ── Projects Grid ── -->
   <section class="section">
-    <div class="container">
-      <!-- Project Filter Toggle -->
-      <div class="filter-toggle">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="core">Core Projects</button>
-        <button class="filter-btn" data-filter="it">IT Projects</button>
+    <div class="section-container">
+
+      <!-- Category label -->
+      <div style="margin-bottom:24px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:0.6rem; color:var(--acid); letter-spacing:0.15em; text-transform:uppercase; opacity:0.65;">
+          // embedded &amp; robotics
+        </span>
       </div>
 
-      <div class="grid grid-3" id="projectsGrid">
-        <div class="card" data-category="core">
-          <img src="./assets/images/pipro.jpg" alt="2D Contour Detection & 3D Depth Mapping System">
-          <h3>2D Contour Detection & 3D Depth Mapping System</h3>
-          <p>Raspberry Pi-based system for 2D contour detection and 3D depth mapping using OpenCV.</p>
-        </div>
-        <div class="card" data-category="core">
-          <img src="./assets/images/robot.png" alt="Internal Logistics Autonomous Robot">
-          <h3>Internal Logistics Autonomous Robot</h3>
-          <p>Autonomous robot using Raspberry Pi for warehouse navigation with sensors and pathfinding.</p>
-        </div>
-        <div class="card" data-category="core">
-          <img src="./assets/images/sha.png" alt="AI-Based Structural Health Monitoring System">
-          <h3>AI-Based Structural Health Monitoring System</h3>
-          <p>AI-integrated system for structural health monitoring with sensors and ML for failure prediction.</p>
-        </div>
-        <div class="card" data-category="core">
-          <img src="./assets/images/project5.jpg" alt="Autonomous GPS-Based Delivery Robot">
-          <h3>Autonomous GPS-Based Delivery Robot</h3>
-          <p>GPS-equipped autonomous delivery robot with sensors for secure navigation.</p>
-        </div>
-        <div class="card" data-category="core">
-          <img src="./assets/images/project1.jpg" alt="Four-Axis Robotic Arm with Precision Control">
-          <h3>Four-Axis Robotic Arm with Precision Control</h3>
-          <p>Four-axis robotic arm controlled by joysticks and mobile for precise tasks.</p>
-        </div>
-        <div class="card" data-category="core">
-          <img src="./assets/images/project8.jpg" alt="Emergency Communication & Alert System">
-          <h3>Emergency Communication & Alert System</h3>
-          <p>Portable communication device for disasters with GPS and voice capabilities.</p>
+      <div class="projects-grid">
+
+        <div class="eng-card project-card stagger-1 reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/pipro.jpg" alt="2D Contour Detection" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>2D Contour Detection &amp; 3D Depth Mapping System</h3>
+            <p>Raspberry Pi-based system for 2D contour detection and 3D depth mapping using OpenCV.</p>
+            <div class="tags">
+              <span class="tag">Embedded</span><span class="tag">Linux</span><span class="tag">OpenCV</span><span class="tag">IoT</span>
+            </div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              View Code
+            </a>
+          </div>
         </div>
 
-        <div class="card" data-category="core">
-          <img src="./assets/images/project2.jpg" alt="Smart street lighting system using IoT">
-          <h3>Smart street lighting and Fault detection locating system using IoT</h3>
-          <p>IoT-based smart street lighting system with sensors and automated controls.</p>
+        <div class="eng-card project-card stagger-2 reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/robot.png" alt="Autonomous Robot" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Internal Logistics Autonomous Robot</h3>
+            <p>Autonomous robot using Raspberry Pi for warehouse navigation with sensors and pathfinding.</p>
+            <div class="tags">
+              <span class="tag">Embedded</span><span class="tag">Linux</span><span class="tag">Robotics</span><span class="tag">IoT</span>
+            </div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              View Code
+            </a>
+          </div>
         </div>
 
-        <div class="card" data-category="core">
-          <img src="./assets/images/project3.png" alt="Transport Management System with GPS Tracking and attendance">
-          <h3>Transport Management System with GPS Tracking and attendance</h3>
-          <p>Fully automated transport management system with GPS tracking and attendance features.</p>
+        <div class="eng-card project-card stagger-3 reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/sha.png" alt="Structural Health Monitoring" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>AI-Based Structural Health Monitoring System</h3>
+            <p>AI-integrated system for structural health monitoring with sensors and ML for failure prediction.</p>
+            <div class="tags">
+              <span class="tag">Embedded</span><span class="tag">IoT</span><span class="tag">AI</span><span class="tag">Robotics</span>
+            </div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              View Code
+            </a>
+          </div>
         </div>
 
-        <div class="card" data-category="core">
-          <img src="./assets/images/project4.jpg" alt="IoT based smart farming system with automated irrigation">
-          <h3>IoT based smart farming system with automated irrigation</h3>
-          <p>IoT-based smart farming system with automated irrigation and sensor monitoring.</p>
+        <div class="eng-card project-card stagger-4 reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/project5.jpg" alt="GPS Delivery Robot" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Autonomous GPS-Based Delivery Robot</h3>
+            <p>GPS-equipped autonomous delivery robot with sensors for secure navigation.</p>
+            <div class="tags">
+              <span class="tag">Embedded</span><span class="tag">IoT</span><span class="tag">Robotics</span>
+            </div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              View Code
+            </a>
+          </div>
         </div>
 
-        <div class="card" data-category="core">
-          <img src="./assets/images/project9.jpg" alt="Emergency Vehicle Tracking and Alert System">
-          <h3>Emergency Vehicle Tracking and Alert System</h3>
-          <p>Real-time tracking and alert system for emergency vehicles using GPS and communication modules.</p>
+        <div class="eng-card project-card stagger-5 reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/project1.jpg" alt="Robotic Arm" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Four-Axis Robotic Arm with Precision Control</h3>
+            <p>Four-axis robotic arm controlled by joysticks and mobile for precise tasks.</p>
+            <div class="tags">
+              <span class="tag">Embedded</span><span class="tag">Robotics</span><span class="tag">IoT</span>
+            </div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              View Code
+            </a>
+          </div>
         </div>
 
-        <div class="card" data-category="it">
-          <img src="./assets/images/auction.png" alt="IPL Auction System Using Python">
-          <h3>IPL Auction System Using Python</h3>
-          <p>Python-based IPL auction system for bidding and team management.</p>
+        <div class="eng-card project-card stagger-6 reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/project8.jpg" alt="Emergency Communication" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Emergency Communication &amp; Alert System</h3>
+            <p>Portable communication device for disasters with GPS and voice capabilities.</p>
+            <div class="tags">
+              <span class="tag">Embedded</span><span class="tag">IoT</span><span class="tag">Networking</span>
+            </div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              View Code
+            </a>
+          </div>
         </div>
-        <div class="card" data-category="it">
-          <img src="./assets/images/winp.png" alt="Cricket Match Win Predictor Using Java">
-          <h3>Cricket Match Win Predictor Using Java</h3>
-          <p>Java application predicting cricket match outcomes using historical data and ML algorithms.</p>
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/project6.jpg" alt="Wireless Rover" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Dual-Mode Wireless Rover</h3>
+            <p>Arduino-based rover with real-time control and environmental sensing.</p>
+            <div class="tags">
+              <span class="tag">Arduino</span><span class="tag">Robotics</span><span class="tag">IoT</span>
+            </div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              View Code
+            </a>
+          </div>
         </div>
-        <div class="card" data-category="it">
-          <img src="./assets/images/invt.png" alt="Inventory Management System Using Python and Sqlite">
-          <h3>Inventory Management System Using Python and Sqlite</h3>
-          <p>Python and SQLite system for inventory tracking, supplier management, and reports.</p>
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/project7.jpg" alt="2-Wheel Bot" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Auto-Balance 2-Wheel Bot Using 3-Axis Gyroscope</h3>
+            <p>2-wheel robot balancing system using 3-axis gyroscope for stability.</p>
+            <div class="tags">
+              <span class="tag">Embedded</span><span class="tag">Robotics</span><span class="tag">IoT</span>
+            </div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              View Code
+            </a>
+          </div>
         </div>
-        <div class="card" data-category="core">
-          <img src="./assets/images/comm.png" alt="Simulated Message Communication through Network between Machines">
-          <h3>Simulated Message Communication through Network between Machines</h3>
-          <p>Linux-based simulation of message communication between machines using TCP/IP protocols.</p>
+
+      </div>
+
+      <!-- Category divider -->
+      <div style="margin: 48px 0 24px; display:flex; align-items:center; gap:16px;">
+        <div style="flex:1; height:1px; background:linear-gradient(90deg, rgba(0,255,224,0.15), transparent);"></div>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:0.6rem; color:var(--acid); letter-spacing:0.15em; text-transform:uppercase; opacity:0.65; white-space:nowrap;">// software &amp; tools</span>
+        <div style="flex:1; height:1px; background:linear-gradient(270deg, rgba(0,255,224,0.15), transparent);"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/moon.png" alt="Moon Phase Detector" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Moon Phase Detector Using Python and OpenCV</h3>
+            <p>Python program detecting moon phases using OpenCV and ML.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">ML</span></div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View Code</a>
+          </div>
         </div>
-        <div class="card" data-category="core">
-          <img src="./assets/images/project6.jpg" alt="Dual-Mode Wireless Rover: Real-Time Control and Environmental Sensing">
-          <h3>Dual-Mode Wireless Rover: Real-Time Control and Environmental Sensing</h3>
-          <p>Arduino-based rover with real-time control and environmental sensing.</p>
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/leaf.png" alt="Leaf Disease Detection" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Leaf Disease Detection Using Python and OpenCV</h3>
+            <p>Python program detecting leaf diseases using OpenCV and ML.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">ML</span></div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View Code</a>
+          </div>
         </div>
-        <div class="card" data-category="core">
-          <img src="./assets/images/project7.jpg" alt="Automatic Balance System for 2-Wheel Bot Using 3-Axis Gyroscope">
-          <h3>Automatic Balance System for 2-Wheel Bot Using 3-Axis Gyroscope</h3>
-          <p>2-wheel robot balancing system using 3-axis gyroscope for stability.</p>
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/comm.png" alt="Network Communication" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Simulated Network Message Communication</h3>
+            <p>Linux-based simulation of message communication between machines using TCP/IP protocols.</p>
+            <div class="tags"><span class="tag">Linux</span><span class="tag">Networking</span><span class="tag">TCP/IP</span></div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View Code</a>
+          </div>
         </div>
-        <div class="card" data-category="it">
-          <img src="./assets/images/moon.png" alt="Moon Phase Detector Using Python and OpenCV">
-          <h3>Moon Phase Detector Using Python and OpenCV</h3>
-          <p>Python program detecting moon phases using OpenCV and ML.</p>
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/auction.png" alt="IPL Auction" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>IPL Auction System Using Python</h3>
+            <p>Python-based IPL auction system for bidding and team management.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">IT</span></div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View Code</a>
+          </div>
         </div>
-        <div class="card" data-category="it">
-          <img src="./assets/images/elec.png" alt="ElectroRookie: A Calculator">
-          <h3>ElectroRookie: A Calculator</h3>
-          <p>Python-based calculator for electronics calculations.</p>
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/winp.png" alt="Cricket Predictor" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Cricket Match Win Predictor Using Java</h3>
+            <p>Java application predicting cricket match outcomes using historical data and ML algorithms.</p>
+            <div class="tags"><span class="tag">Java</span><span class="tag">ML</span><span class="tag">IT</span></div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View Code</a>
+          </div>
         </div>
-        <div class="card" data-category="it">
-          <img src="./assets/images/leaf.png" alt="Leaf Disease Detection Using Python and OpenCV">
-          <h3>Leaf Disease Detection Using Python and OpenCV</h3>
-          <p>Python program detecting leaf diseases using OpenCV and ML.</p>
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/invt.png" alt="Inventory Management" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Inventory Management System (Python + SQLite)</h3>
+            <p>Python and SQLite system for inventory tracking, supplier management, and reports.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">IT</span></div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View Code</a>
+          </div>
         </div>
-        <div class="card" data-category="it">
-          <img src="./assets/images/lib.png" alt="Library Management System Using Python and MySQL">
-          <h3>Library Management System Using Python and MySQL</h3>
-          <p>Python and MySQL system for library book management and reports.</p>
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/lib.png" alt="Library Management" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Library Management System (Python + MySQL)</h3>
+            <p>Python and MySQL system for library book management and reports.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">IT</span></div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View Code</a>
+          </div>
         </div>
-        <div class="card" data-category="it">
-          <img src="./assets/images/attend.png" alt="Attendance Management System Using Python and MySQL with QR Code">
-          <h3>Attendance Management System Using Python and MySQL with QR Code</h3>
-          <p>Python and MySQL attendance system with QR code integration.</p>
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/attend.png" alt="Attendance System" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>QR Code Attendance Management System</h3>
+            <p>Python and MySQL attendance system with QR code integration.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">QR Code</span></div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View Code</a>
+          </div>
         </div>
-        <div class="card" data-category="it">
-          <img src="./assets/images/audio.png" alt="Audio Player using Python packages">
-          <h3>Audio Player using Python packages</h3>
-          <p>Python audio player with playback controls and user interface.</p>
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/audio.png" alt="Audio Player" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Audio Player Using Python</h3>
+            <p>Python audio player with playback controls and user interface.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Audio</span></div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View Code</a>
+          </div>
         </div>
-        <div class="card" data-category="it">
-          <img src="./assets/images/bank.png" alt="Bank Management System Using Python and MySQL">
-          <h3>Bank Management System Using Python and MySQL</h3>
-          <p>Python and MySQL system for bank account management and transactions.</p>
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/bank.png" alt="Bank Management" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Bank Management System (Python + MySQL)</h3>
+            <p>Python and MySQL system for bank account management and transactions.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">Banking</span></div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View Code</a>
+          </div>
         </div>
-        <div class="card" data-category="it">
-          <img src="./assets/images/it.png" alt="Website for My Youtube Channel">
-          <h3>Website for My Youtube Channel</h3>
-          <p>Personal website for YouTube channel using HTML and CSS.</p>
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/elec.png" alt="ElectroRookie Calculator" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>ElectroRookie: Electronics Calculator</h3>
+            <p>Python-based calculator for electronics calculations.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">IT</span></div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View Code</a>
+          </div>
         </div>
-        <div class="card" data-category="it">
-          <img src="./assets/images/ki.png" alt="Website for Kreotix Innovations">
-          <h3>Website for Kreotix Innovations</h3>
-          <p>Website for Kreotix Innovations using HTML, CSS, and JavaScript.</p>
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/it.png" alt="YouTube Website" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Website for YouTube Channel</h3>
+            <p>Personal website for YouTube channel using HTML and CSS.</p>
+            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View Code</a>
+          </div>
         </div>
+
+        <div class="eng-card project-card reveal">
+          <div class="card-img-wrap">
+            <img src="../src/assets/images/ki.png" alt="Kreotix Website" class="card-img">
+          </div>
+          <div class="card-body">
+            <h3>Website for Kreotix Innovations</h3>
+            <p>Website for Kreotix Innovations using HTML, CSS, and JavaScript.</p>
+            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+            <a href="https://github.com/Karthigeyan06" target="_blank" class="btn-primary"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View Code</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
+  <!-- ── Footer ── -->
+  <footer>
+    <span>© 2026 KARTHIGEYAN GANESAN · EMBEDDED SYSTEMS ENGINEER<span class="dot">·</span>ALL PROJECTS ON <a href="https://github.com/Karthigeyan06" target="_blank" style="color:var(--acid);text-decoration:none;">GITHUB</a></span>
+  </footer>
+
   <script>
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const navLinks = document.getElementById('navLinks');
-
-    mobileMenuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('mobile');
-    });
-
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('mobile');
-      });
-    });
-
-    // Project filtering functionality
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.card');
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // Remove active class from all buttons
-        filterBtns.forEach(b => b.classList.remove('active'));
-        // Add active class to clicked button
-        btn.classList.add('active');
-
-        const filterValue = btn.getAttribute('data-filter');
-
-        // Filter projects
-        projectCards.forEach(card => {
-          if (filterValue === 'all') {
-            card.style.display = 'block';
-          } else {
-            const cardCategory = card.getAttribute('data-category');
-            card.style.display = cardCategory === filterValue ? 'block' : 'none';
-          }
+    // ── Particles ──
+    (function() {
+      const canvas = document.getElementById('particles-canvas');
+      const ctx = canvas.getContext('2d');
+      let W = window.innerWidth, H = window.innerHeight;
+      canvas.width = W; canvas.height = H;
+      const dots = Array.from({ length: 50 }, () => ({
+        x: Math.random() * W, y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3,
+        r: Math.random() * 1.5 + 0.5
+      }));
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        dots.forEach(d => {
+          d.x += d.vx; d.y += d.vy;
+          if (d.x < 0 || d.x > W) d.vx *= -1;
+          if (d.y < 0 || d.y > H) d.vy *= -1;
+          ctx.beginPath();
+          ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(0,255,224,0.22)';
+          ctx.fill();
         });
+        for (let i = 0; i < dots.length; i++)
+          for (let j = i + 1; j < dots.length; j++) {
+            const dx = dots[i].x - dots[j].x, dy = dots[i].y - dots[j].y;
+            const dist = Math.sqrt(dx*dx + dy*dy);
+            if (dist < 110) {
+              ctx.beginPath();
+              ctx.strokeStyle = `rgba(0,255,224,${0.07 * (1 - dist/110)})`;
+              ctx.lineWidth = 0.5;
+              ctx.moveTo(dots[i].x, dots[i].y);
+              ctx.lineTo(dots[j].x, dots[j].y);
+              ctx.stroke();
+            }
+          }
+        requestAnimationFrame(draw);
+      }
+      draw();
+      window.addEventListener('resize', () => {
+        W = window.innerWidth; H = window.innerHeight;
+        canvas.width = W; canvas.height = H;
       });
+    })();
+
+    // ── Mobile nav ──
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('mobile-drawer');
+    hamburger.addEventListener('click', () => {
+      const open = drawer.classList.toggle('open');
+      hamburger.textContent = open ? '✕' : '☰';
     });
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      hamburger.textContent = '☰';
+    }));
+
+    // ── Scroll reveal ──
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
