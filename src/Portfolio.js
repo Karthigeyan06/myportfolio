@@ -372,12 +372,6 @@ const styles = `
     gap: 48px;
     align-items: center;
   }
-  .hero-stats {
-    display: flex;
-    gap: 24px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-  }
   .hero-image-desktop { display: block; }
   .hero-image-mobile  { display: none;  }
 
@@ -456,23 +450,6 @@ const styles = `
       flex-wrap: wrap;
     }
 
-    .hero-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 24px;
-      width: 100%;
-    }
-    .hero-stat-item {
-      background: rgba(0,255,224,0.04);
-      border: 1px solid rgba(0,255,224,0.1);
-      border-radius: 4px;
-      padding: 12px 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
     /* About — single column */
     .about-grid {
       grid-template-columns: 1fr;
@@ -528,7 +505,6 @@ const styles = `
 
   /* Very small phones */
   @media (max-width: 380px) {
-    .hero-stats { grid-template-columns: 1fr 1fr; }
     .btn-primary, .btn-ghost { padding: 8px 14px; font-size: 0.65rem; }
   }
 `;
@@ -868,15 +844,6 @@ const Hero = () => {
               </a>
             </motion.div>
 
-            {/* Stats */}
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.7 }} className="hero-stats">
-              {[['25+', 'Projects'], ['3', 'Internships'], ['8.8', 'CGPA'], ['3', 'Publications']].map(([val, lbl]) => (
-                <div key={lbl} className="hero-stat-item">
-                  <div className="display" style={{ fontSize: 'clamp(1.2rem, 4vw, 1.5rem)', fontWeight: 800, color: 'var(--acid)', lineHeight: 1 }}>{val}</div>
-                  <div className="mono" style={{ fontSize: '0.5rem', color: 'var(--muted)', letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: 4, textAlign: 'center' }}>{lbl}</div>
-                </div>
-              ))}
-            </motion.div>
           </div>
 
           {/* Profile image — desktop only */}
@@ -885,7 +852,7 @@ const Hero = () => {
             <ProfileImage size={220} />
             <div className="mono" style={{ position: 'absolute', bottom: -24, left: 0, right: 0, textAlign: 'center', fontSize: '0.58rem', color: 'var(--acid)', letterSpacing: '0.08em', opacity: 0.7, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
               <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--volt)', display: 'inline-block', boxShadow: '0 0 8px var(--volt)', flexShrink: 0 }} />
-              ACTIVE — INTERN @ embedUR systems
+              SOFTWARE DEVELOPMENT ENGINEER @ embedUR Systems
             </div>
           </motion.div>
         </div>
@@ -904,7 +871,7 @@ const About = () => {
   const cards = [
     { icon: <Code2 size={18} />, title: 'Expertise', body: 'Embedded C, Firmware Development, Kernel Debugging, OpenCV, Robotics, IoT systems, Computer Networks, Linux development' },
     { icon: <Zap size={18} />, title: 'Passion', body: 'Building intelligent IoT ecosystems that bridge hardware and software pacing towards Automation' },
-    { icon: <Cpu size={18} />, title: 'Education', body: 'B.E. ECE 2022–2026 · Rajalakshmi Institute of Technology, Chennai' },
+    { icon: <Cpu size={18} />, title: 'Education', body: 'B.E. ECE 2022–2026 · Rajalakshmi Institute of Technology, Chennai · CGPA: 8.8' },
   ];
 
   return (
@@ -920,7 +887,7 @@ const About = () => {
               As an Embedded Systems &amp; IoT Engineer, I specialize in developing robust, scalable solutions for industrial and consumer applications. With expertise in microcontrollers, Linux systems, and computer vision, I bridge the gap between hardware and software to create innovative products.
             </p>
             <p style={{ lineHeight: 1.9, color: 'var(--muted)', fontSize: 'clamp(0.78rem, 2.5vw, 0.85rem)' }}>
-              Currently interning at <span style={{ color: 'var(--acid)' }}>embedUR Systems</span> on Linux-based IIoT solutions and IEEE 802.11 protocol implementation.
+              After completing my internship, I joined <span style={{ color: 'var(--acid)' }}>embedUR Systems</span> as a Software Development Engineer in June 2026, working on Linux-based IIoT solutions and IEEE 802.11 protocol implementation.
             </p>
           </motion.div>
 
@@ -1086,7 +1053,8 @@ const Experience = () => {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   const data = [
-    { company: 'embedUR Systems', role: 'Project Intern', duration: 'Nov 2025 – Present', achievements: ['Developed Linux-based IIoT solutions', 'Implemented IEEE 802.11 protocols'], tech: ['Linux', 'IIoT', 'Networking'], active: true },
+    { company: 'embedUR Systems', role: 'Software Development Engineer', duration: 'Jun 2026 – Present', achievements: ['Developing Linux-based IIoT solutions', 'Implementing IEEE 802.11 protocols'], tech: ['Linux', 'IIoT', 'Networking'], active: true },
+    { company: 'embedUR Systems', role: 'Project Intern', duration: 'Nov 2025 – May 2026', achievements: ['Developed Linux-based IIoT solutions', 'Implemented IEEE 802.11 protocols'], tech: ['Linux', 'IIoT', 'Networking'] },
     { company: 'Kreotix Innovations', role: 'Technical Lead', duration: 'Feb 2025 – May 2025', achievements: ['Managed website development projects', 'Delivered client solutions'], tech: ['HTML', 'CSS', 'JavaScript'] },
     { company: 'Delphi-TVS Technologies', role: 'Engineering Intern', duration: 'Dec 2024 – Jan 2025', achievements: ['Troubleshot industrial machines', 'Developed QR code tracking app'], tech: ['PLCs', 'CNC', 'Web Apps'] },
     { company: 'Rook Ecom Pvt Ltd', role: 'Techie Intern', duration: 'Jan 2023 – Apr 2023', achievements: ['Optimized WordPress websites', 'Enhanced user experience'], tech: ['WordPress', 'UX'] },
